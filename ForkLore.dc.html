@@ -57,6 +57,9 @@ button{font-family:inherit;cursor:pointer}
 [data-split-wide]{grid-template-columns:.9fr 1.1fr !important}
 [data-footer-grid]{grid-template-columns:1fr 1.3fr !important}
 }
+[data-pill]{padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156;background:none;border:1px solid rgba(47,65,86,.35);cursor:pointer;transition:background .3s,border-color .3s,color .3s}
+[data-pill]:hover{border-color:#2F4156}
+[data-pill][data-sel="on"]{background:#2F4156;border-color:#2F4156;color:#F5F0EB}
 @keyframes fl-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes fl-bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1.5deg)}}
 @media (prefers-reduced-motion: reduce){
@@ -978,7 +981,7 @@ button{font-family:inherit;cursor:pointer}
         </svg>
         <h1 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(38px,6.6vw,94px);line-height:.96;letter-spacing:-.025em;color:#F5F0EB;max-width:15ch">Five questions. Then we take it from here.</h1>
       </div>
-      <p data-anim data-delay="180" style="font-size:clamp(15px,1.1vw,18px);line-height:1.66;color:#C8D9E6;max-width:42ch">This is the shape of the plan builder. Answer once, and every decision after it is derived rather than asked.</p>
+      <p data-anim data-delay="180" style="font-size:clamp(15px,1.1vw,18px);line-height:1.66;color:#C8D9E6;max-width:42ch">This is the shape of the plan builder. Make a few choices below and watch the plan resolve &#8212; every decision after these is derived rather than asked. The full builder opens at launch.</p>
     </div>
   </section>
 
@@ -987,28 +990,28 @@ button{font-family:inherit;cursor:pointer}
 
       <div data-anim="rise" style="display:grid;gap:clamp(16px,3vw,44px)" data-split-wide>
         <div><span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#567C8D;margin-bottom:12px">Step 01</span><h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.02;color:#2F4156">Your goal</h2><p style="margin-top:12px;font-size:14.5px;line-height:1.6;color:#2F4156;max-width:32ch">The single input everything else is derived from.</p></div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
-          <span style="background:#2F4156;color:#F5F0EB;padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600">Fat loss</span>
-          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Muscle gain</span>
-          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Maintenance</span>
+        <div role="group" aria-label="Goal" style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
+          <sc-for list="{{ buildGoals }}" as="g" hint-placeholder-count="3">
+            <button type="button" data-pill data-sel="{{ g.sel }}" aria-pressed="{{ g.pressed }}" onClick="{{ g.on }}">{{ g.label }}</button>
+          </sc-for>
         </div>
       </div>
 
       <div data-anim="rise" style="display:grid;gap:clamp(16px,3vw,44px);padding-top:clamp(28px,4vh,52px);border-top:1px solid rgba(47,65,86,.2)" data-split-wide>
         <div><span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#567C8D;margin-bottom:12px">Step 02</span><h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.02;color:#2F4156">Food preference</h2><p style="margin-top:12px;font-size:14.5px;line-height:1.6;color:#2F4156;max-width:32ch">This decides which half of the menu you ever see.</p></div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
-          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Vegetarian</span>
-          <span style="background:#567C8D;color:#2F4156;padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700">Non-vegetarian</span>
-          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Egg</span>
+        <div role="group" aria-label="Food preference" style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
+          <sc-for list="{{ buildDiets }}" as="d" hint-placeholder-count="3">
+            <button type="button" data-pill data-sel="{{ d.sel }}" aria-pressed="{{ d.pressed }}" onClick="{{ d.on }}">{{ d.label }}</button>
+          </sc-for>
         </div>
       </div>
 
       <div data-anim="rise" style="display:grid;gap:clamp(16px,3vw,44px);padding-top:clamp(28px,4vh,52px);border-top:1px solid rgba(47,65,86,.2)" data-split-wide>
         <div><span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#567C8D;margin-bottom:12px">Step 03</span><h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.02;color:#2F4156">Meal frequency</h2><p style="margin-top:12px;font-size:14.5px;line-height:1.6;color:#2F4156;max-width:32ch">Which meals of the day you want handled.</p></div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
-          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Breakfast</span>
-          <span style="background:#2F4156;color:#F5F0EB;padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600">Lunch</span>
-          <span style="background:#2F4156;color:#F5F0EB;padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600">Dinner</span>
+        <div role="group" aria-label="Meal frequency" style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
+          <sc-for list="{{ buildMeals }}" as="m" hint-placeholder-count="3">
+            <button type="button" data-pill data-sel="{{ m.sel }}" aria-pressed="{{ m.pressed }}" onClick="{{ m.on }}">{{ m.label }}</button>
+          </sc-for>
         </div>
       </div>
 
@@ -1032,10 +1035,10 @@ button{font-family:inherit;cursor:pointer}
       <div data-anim="rise" data-delay="180" style="margin-top:clamp(32px,5vh,56px);background:#F5F0EB;border:1px solid rgba(47,65,86,.22);border-radius:3px;padding:clamp(24px,3vw,44px)">
         <div style="display:grid;gap:clamp(20px,3vw,44px)" data-split>
           <div style="display:grid;gap:2px;align-content:start">
-            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Goal</span><span style="font-size:15px;color:#2F4156">Fat loss</span></div>
-            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Plan</span><span style="font-size:15px;color:#2F4156">Lunch + dinner, 5 days</span></div>
-            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Food</span><span style="font-size:15px;color:#2F4156">Non-vegetarian</span></div>
-            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Daily target</span><span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(20px,2.2vw,30px);line-height:1;color:#2F4156">1,780 kcal</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Goal</span><span style="font-size:15px;color:#2F4156">{{ result.goal }}</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Plan</span><span style="font-size:15px;color:#2F4156">{{ result.plan }}</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Food</span><span style="font-size:15px;color:#2F4156">{{ result.food }}</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Daily target</span><span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(20px,2.2vw,30px);line-height:1;color:#2F4156">{{ result.kcal }}</span></div>
           </div>
           <div style="position:relative;aspect-ratio:4/3;border-radius:2px;overflow:hidden;background:#C8D9E6">
             <image-slot id="fl-start-plan" shape="rect" fit="cover" placeholder="RESULT — a week of ForkLore meals laid out in a row, overhead"></image-slot>
@@ -1112,7 +1115,7 @@ button{font-family:inherit;cursor:pointer}
 class Component extends DCLogic {
   state = {
     page: 'home', drawer: false, faq: null, plan: null, ing: null,
-    step: 0, build: { goal: '', diet: '', meals: ['Lunch'], spice: 'Medium' }
+    step: 0, build: { goal: 'Fat loss', diet: 'Non-vegetarian', meals: ['Lunch', 'Dinner'], spice: 'Medium' }
   };
 
   componentDidMount() {
@@ -1244,6 +1247,35 @@ class Component extends DCLogic {
       return { label: it[0], href: '#/' + it[1], current: page === it[1] ? 'page' : null };
     });
 
+    const build = this.state.build;
+    const setBuild = function (patch) {
+      self.setState({ build: Object.assign({}, self.state.build, patch) });
+    };
+    const mealOrder = ['Breakfast', 'Lunch', 'Dinner'];
+    const orderedMeals = mealOrder.filter(function (m) { return build.meals.indexOf(m) > -1; });
+    const kcalByGoal = { 'Fat loss': '1,780 kcal', 'Muscle gain': '2,450 kcal', 'Maintenance': '2,100 kcal' };
+    const mealsLabel = (function () {
+      if (orderedMeals.length === 0) return '—';
+      const joined = orderedMeals.map(function (m) { return m.toLowerCase(); }).join(' + ');
+      return joined.charAt(0).toUpperCase() + joined.slice(1) + ', 5 days';
+    })();
+    const pill = function (list, key) {
+      return list.map(function (label) {
+        return {
+          label: label,
+          sel: build[key] === label ? 'on' : null,
+          pressed: build[key] === label,
+          on: function () { const o = {}; o[key] = label; setBuild(o); }
+        };
+      });
+    };
+    const toggleMeal = function (m) {
+      const cur = self.state.build.meals;
+      const next = cur.indexOf(m) > -1 ? cur.filter(function (x) { return x !== m; }) : cur.concat([m]);
+      if (next.length === 0) return;
+      self.setState({ build: Object.assign({}, self.state.build, { meals: next }) });
+    };
+
     return {
       nav: nav,
       drawerOpen: this.state.drawer,
@@ -1256,6 +1288,17 @@ class Component extends DCLogic {
       isStory: page === 'our-story',
       isFaq: page === 'faq',
       isStart: page === 'start' || page === 'contact',
+
+      buildGoals: pill(['Fat loss', 'Muscle gain', 'Maintenance'], 'goal'),
+      buildDiets: pill(['Vegetarian', 'Non-vegetarian', 'Egg'], 'diet'),
+      buildMeals: ['Breakfast', 'Lunch', 'Dinner'].map(function (m) {
+        const on = build.meals.indexOf(m) > -1;
+        return { label: m, sel: on ? 'on' : null, pressed: on, on: function () { toggleMeal(m); } };
+      }),
+      result: {
+        goal: build.goal, plan: mealsLabel, food: build.diet,
+        kcal: kcalByGoal[build.goal] || '2,000 kcal'
+      },
 
       plans: PLANS.map(function (p, i) {
         const open = self.state.plan === p.id;
