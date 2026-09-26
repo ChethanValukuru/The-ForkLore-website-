@@ -61,11 +61,13 @@ button{font-family:inherit;cursor:pointer}
 @keyframes fl-bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1.5deg)}}
 @media (prefers-reduced-motion: reduce){
 [data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
-[data-scene]{--p:0.82 !important;height:auto !important}
+[data-scene]{--p:1 !important;height:auto !important}
 [data-stick]{position:static !important;height:auto !important}
+[data-plate-grid]{--stag:0 !important}
 [data-marquee]{animation:none !important}
 [data-bob]{animation:none !important}
 }
+@media (min-width:760px){[data-plate-grid]{grid-template-columns:repeat(4,1fr) !important;--stag:1 !important}}
 </style>
 </helmet>
 
@@ -480,8 +482,8 @@ button{font-family:inherit;cursor:pointer}
           </div>
           <p style="font-size:clamp(14px,1.05vw,17px);line-height:1.6;color:#2F4156;max-width:34ch">The plate comes apart. Every component has a weight, and every weight has a number attached to it.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(6px,1vw,16px)">
-          <div style="transform:translateY(calc((1 - var(--p)) * 22vh))">
+        <div data-plate-grid style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,1vw,16px);--stag:.4">
+          <div style="transform:translateY(calc((1 - var(--p)) * 22vh * var(--stag)))">
             <div style="aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden"><image-slot id="fl-dec-1" shape="rect" fit="cover" placeholder="COMPONENT — chicken tikka pieces"></image-slot></div>
             <div style="padding-top:12px;opacity:calc(var(--p) * 3 - 1.2)">
               <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">Chicken tikka</span>
@@ -489,7 +491,7 @@ button{font-family:inherit;cursor:pointer}
               <span style="display:block;margin-top:4px;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(18px,2vw,26px);color:#2F4156">42g protein</span>
             </div>
           </div>
-          <div style="transform:translateY(calc((1 - var(--p)) * -18vh))">
+          <div style="transform:translateY(calc((1 - var(--p)) * -18vh * var(--stag)))">
             <div style="aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden"><image-slot id="fl-dec-2" shape="rect" fit="cover" placeholder="COMPONENT — jeera brown rice"></image-slot></div>
             <div style="padding-top:12px;opacity:calc(var(--p) * 3 - 1.45)">
               <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">Brown rice</span>
@@ -497,7 +499,7 @@ button{font-family:inherit;cursor:pointer}
               <span style="display:block;margin-top:4px;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(18px,2vw,26px);color:#2F4156">48g carbs</span>
             </div>
           </div>
-          <div style="transform:translateY(calc((1 - var(--p)) * 26vh))">
+          <div style="transform:translateY(calc((1 - var(--p)) * 26vh * var(--stag)))">
             <div style="aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden"><image-slot id="fl-dec-3" shape="rect" fit="cover" placeholder="COMPONENT — roasted mixed vegetables"></image-slot></div>
             <div style="padding-top:12px;opacity:calc(var(--p) * 3 - 1.7)">
               <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">Vegetables</span>
@@ -505,7 +507,7 @@ button{font-family:inherit;cursor:pointer}
               <span style="display:block;margin-top:4px;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(18px,2vw,26px);color:#2F4156">fibre</span>
             </div>
           </div>
-          <div style="transform:translateY(calc((1 - var(--p)) * -14vh))">
+          <div style="transform:translateY(calc((1 - var(--p)) * -14vh * var(--stag)))">
             <div style="aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden"><image-slot id="fl-dec-4" shape="rect" fit="cover" placeholder="COMPONENT — cucumber salad / raita"></image-slot></div>
             <div style="padding-top:12px;opacity:calc(var(--p) * 3 - 1.95)">
               <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">Salad</span>
@@ -553,7 +555,7 @@ button{font-family:inherit;cursor:pointer}
           <p style="margin-top:18px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.64;color:#C8D9E6">Twelve weeks, four stages, and a check-in that changes the plan rather than your resolve.</p>
         </div>
         <div style="position:relative;height:3px;background:rgba(245,240,235,.22);margin-bottom:clamp(20px,3vh,34px)">
-          <div style="position:absolute;left:0;top:0;height:100%;background:#C8D9E6;width:calc(var(--p) * 118%)"></div>
+          <div style="position:absolute;left:0;top:0;height:100%;background:#C8D9E6;width:min(100%, calc(var(--p) * 118%))"></div>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:clamp(10px,1.6vw,24px)">
           <div style="opacity:calc(var(--p) * 5 - 0.1)"><span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(24px,2.8vw,38px);line-height:1;color:#C8D9E6">01&#8211;02</span><h3 style="margin-top:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Foundation</h3><p style="margin-top:10px;font-size:13.5px;line-height:1.55;color:#C8D9E6">Meals start arriving. The routine forms before anything is tuned.</p></div>
