@@ -8,7 +8,7 @@
 
 Paste this at the end of each prompt below. It is what keeps 45 images looking like one brand.
 
-> Editorial food photography for a premium Indian nutrition brand. Natural window daylight, soft directional light from one side, gentle falloff. Warm neutral palette only: bone-cream and tan surfaces, deep olive-green and dark brown accents. Matte stoneware and hammered steel, linen or raw cotton cloth. Honest home-scale portions, not restaurant styling. Slight imperfection welcome — a crumb, an uneven edge, a smudge on the rim. Shallow depth of field. No text, no logos, no packaging labels, no plastic, no bright saturated colours, no gradient backdrops, no garnish confetti, no cream-heavy gravies, no deep-fried food.
+> Editorial food photography for a premium Indian nutrition brand. Natural window daylight, soft directional light from one side, gentle falloff. Brand palette: warm bone-cream (#F5F0EB) and soft tan surfaces and linen, with muted slate-blue (#567C8D) and deep navy (#2F4156) props — matte stoneware bowls and plates in bone, slate-blue or charcoal, hammered steel katoris, raw cotton or linen cloth in cream or dusty blue. The food stays naturally warm and appetising; the surfaces and props carry the cool, calm brand tone, so nothing on the plate is recoloured. Honest home-scale portions, not restaurant styling. Slight imperfection welcome — a crumb, an uneven edge, a smudge on the rim. Shallow depth of field. No text, no logos, no packaging labels, no plastic, no bright saturated colours, no gradient backdrops, no garnish confetti, no cream-heavy gravies, no deep-fried food.
 
 ---
 
