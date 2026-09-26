@@ -65,7 +65,7 @@ button{font-family:inherit;cursor:pointer}
 @media (prefers-reduced-motion: reduce){
 [data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
 [data-scene]{--p:1 !important;height:auto !important}
-[data-stick]{position:static !important;height:auto !important}
+[data-stick]{position:static !important;height:auto !important;opacity:1 !important}
 [data-plate-grid]{--stag:0 !important}
 [data-marquee]{animation:none !important}
 [data-bob]{animation:none !important}
@@ -375,7 +375,7 @@ button{font-family:inherit;cursor:pointer}
   </section>
 
   <section data-scene aria-label="Step one: your goal" style="--p:.82;position:relative;height:240vh;background:#F5F0EB">
-    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
         <div>
           <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#567C8D;font-weight:700;margin-bottom:16px">Step 01</span>
@@ -422,7 +422,7 @@ button{font-family:inherit;cursor:pointer}
   </section>
 
   <section data-scene aria-label="Step two: your plan" style="--p:.82;position:relative;height:240vh;background:#C8D9E6">
-    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
         <div>
           <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#2F4156;font-weight:700;margin-bottom:16px">Step 02</span>
@@ -455,7 +455,7 @@ button{font-family:inherit;cursor:pointer}
   </section>
 
   <section data-scene aria-label="Step three: your meals" style="--p:.82;position:relative;height:250vh;background:#2F4156;color:#F5F0EB">
-    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
         <div>
           <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#C8D9E6;font-weight:700;margin-bottom:16px">Step 03</span>
@@ -476,7 +476,7 @@ button{font-family:inherit;cursor:pointer}
   </section>
 
   <section data-scene aria-label="Step four: your nutrition" style="--p:.82;position:relative;height:270vh;background:#F5F0EB">
-    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div style="max-width:1400px;margin:0 auto;width:100%">
         <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:clamp(24px,4vh,48px)">
           <div>
@@ -519,7 +519,7 @@ button{font-family:inherit;cursor:pointer}
             </div>
           </div>
         </div>
-        <div style="margin-top:clamp(20px,3vh,36px);display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(47,65,86,.3);opacity:calc(var(--p) * 4 - 2.7)">
+        <div style="margin-top:clamp(20px,3vh,36px);display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(47,65,86,.3);opacity:calc(var(--p) * 4 - 2.4)">
           <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#2F4156">Plate total</span>
           <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(30px,4vw,58px);line-height:1;color:#2F4156">520 kcal &#183; 46P &#183; 54C &#183; 12F</span>
         </div>
@@ -528,7 +528,7 @@ button{font-family:inherit;cursor:pointer}
   </section>
 
   <section data-scene aria-label="Step five: your routine" style="--p:.82;position:relative;height:230vh;background:#C8D9E6">
-    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div style="max-width:1400px;margin:0 auto;width:100%">
         <div style="max-width:44ch;margin-bottom:clamp(26px,4vh,50px)">
           <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#2F4156;font-weight:700;margin-bottom:14px">Step 05</span>
@@ -544,13 +544,13 @@ button{font-family:inherit;cursor:pointer}
           <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">SAT</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 4.2)"></div><div style="aspect-ratio:1/1;border:1px dashed rgba(47,65,86,.45);border-radius:2px;opacity:calc(var(--p) * 8 - 4.6)"></div></div>
           <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">SUN</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 5)"></div><div style="aspect-ratio:1/1;border:1px dashed rgba(47,65,86,.45);border-radius:2px;opacity:calc(var(--p) * 8 - 5.4)"></div></div>
         </div>
-        <p style="margin-top:clamp(18px,2.5vh,30px);font-family:'Caveat','Kalam',cursive;font-size:clamp(16px,1.6vw,22px);color:#2F4156;opacity:calc(var(--p) * 4 - 2.6)">two meals a day, five days &#8212; the weekend stays yours</p>
+        <p style="margin-top:clamp(18px,2.5vh,30px);font-family:'Caveat','Kalam',cursive;font-size:clamp(16px,1.6vw,22px);color:#2F4156;opacity:calc(var(--p) * 4 - 2.3)">two meals a day, five days &#8212; the weekend stays yours</p>
       </div>
     </div>
   </section>
 
   <section data-scene aria-label="Step six: your progress" style="--p:.82;position:relative;height:250vh;background:#2F4156;color:#F5F0EB">
-    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div style="max-width:1400px;margin:0 auto;width:100%">
         <div style="max-width:46ch;margin-bottom:clamp(30px,4.5vh,56px)">
           <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#C8D9E6;font-weight:700;margin-bottom:14px">Step 06</span>
