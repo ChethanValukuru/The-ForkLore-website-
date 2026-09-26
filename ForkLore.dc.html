@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<template id="__bundler_thumbnail">
+<svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="300" fill="#F5F0EB"/>
+<rect x="90" y="90" width="120" height="120" rx="12" fill="#2F4156"/>
+<text x="150" y="172" font-family="Georgia,serif" font-size="86" fill="#F5F0EB" text-anchor="middle">F</text>
+</svg>
+</template>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ForkLore — The story your body needs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=DM+Serif+Display:ital@0;1&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#F5F0EB;color:#2F4156;font-family:'Karla',system-ui,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-optical-sizing:auto;text-rendering:optimizeLegibility;text-wrap:pretty;overflow-x:hidden}
+h1,h2,h3,h4,p{margin:0}
+a{color:#2F4156;text-decoration:none}
+a:hover{color:#567C8D}
+button{font-family:inherit;cursor:pointer}
+::selection{background:#567C8D;color:#F5F0EB}
+:focus-visible{outline:2px solid #2F4156;outline-offset:4px}
+[data-reveal="out"]{opacity:0;transform:translateY(26px)}
+[data-reveal="in"]{opacity:1;transform:none;transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+[data-anim="left"][data-reveal="out"]{transform:translateX(-30px)}
+[data-anim="right"][data-reveal="out"]{transform:translateX(30px)}
+[data-anim="rise"][data-reveal="out"]{transform:translateY(60px)}
+[data-anim="scale"][data-reveal="out"]{transform:scale(.95)}
+[data-anim="clip"][data-reveal="out"]{opacity:1;clip-path:inset(0 100% 0 0)}
+[data-anim="clip"][data-reveal="in"]{clip-path:inset(0 0 0 0);transition:clip-path 1.2s cubic-bezier(.2,.7,.2,1)}
+[data-anim="wipe"][data-reveal="out"]{opacity:1;clip-path:inset(100% 0 0 0)}
+[data-anim="wipe"][data-reveal="in"]{clip-path:inset(0 0 0 0);transition:clip-path 1.1s cubic-bezier(.2,.7,.2,1)}
+[data-onhover]{opacity:0;transform:translateY(8px);transition:opacity .45s,transform .45s}
+[data-card]:hover [data-onhover],[data-card]:focus-visible [data-onhover]{opacity:1;transform:none}
+[data-zoom]{transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+[data-card]:hover [data-zoom]{transform:scale(1.045)}
+[data-card]:hover [data-shift]{transform:translateX(6px)}
+[data-shift]{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+@media (hover:none){[data-onhover]{opacity:1;transform:none}}
+@media (min-width:700px){[data-nav-cta]{display:inline-flex !important}}
+@media (min-width:900px){
+[data-nav-desktop]{display:flex !important}
+[data-nav-burger]{display:none !important}
+[data-hero-grid]{grid-template-columns:1.06fr .94fr !important}
+[data-split]{grid-template-columns:1fr 1fr !important}
+[data-split-wide]{grid-template-columns:.9fr 1.1fr !important}
+[data-footer-grid]{grid-template-columns:1fr 1.3fr !important}
+}
+@keyframes fl-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes fl-bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1.5deg)}}
+@media (prefers-reduced-motion: reduce){
+[data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
+[data-scene]{--p:0.82 !important;height:auto !important}
+[data-stick]{position:static !important;height:auto !important}
+[data-marquee]{animation:none !important}
+[data-bob]{animation:none !important}
+}
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#F5F0EB">
+
+<a href="#main" style="position:absolute;left:-9999px;top:0;background:#2F4156;color:#F5F0EB;padding:12px 18px;z-index:200" style-focus="left:12px;top:12px">Skip to content</a>
+
+<header style="position:sticky;top:0;z-index:120;background:rgba(245,240,235,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(47,65,86,.16)">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 clamp(18px,4vw,44px);height:clamp(64px,8vh,78px)">
+    <a href="#/home" aria-label="ForkLore home" style="display:flex;align-items:baseline;gap:9px;flex:0 0 auto">
+      <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(21px,2.1vw,26px);letter-spacing:-.01em;color:#2F4156">ForkLore</span>
+      <span style="width:5px;height:5px;border-radius:50%;background:#567C8D;display:block"></span>
+    </a>
+    <nav aria-label="Primary" style="display:none;gap:clamp(18px,2.4vw,34px);align-items:center" data-nav-desktop>
+      <sc-for list="{{ nav }}" as="item" hint-placeholder-count="6">
+        <a href="{{ item.href }}" aria-current="{{ item.current }}" style="font-size:13.5px;letter-spacing:.09em;text-transform:uppercase;font-weight:500;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .35s,color .35s" style-hover="border-color:#567C8D;color:#2F4156">{{ item.label }}</a>
+      </sc-for>
+    </nav>
+    <div style="display:flex;align-items:center;gap:12px;flex:0 0 auto">
+      <a href="#/start" style="display:none;align-items:center;gap:10px;background:#2F4156;color:#F5F0EB;padding:13px 22px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;transition:background .35s,transform .35s" style-hover="background:#2F4156;color:#F5F0EB;transform:translateY(-2px)" data-nav-cta>Start my plan <span style="display:inline-block;transition:transform .35s">&#8594;</span></a>
+      <button type="button" onClick="{{ toggleDrawer }}" aria-label="Menu" aria-expanded="{{ drawerOpen }}" style="display:flex;flex-direction:column;gap:5px;justify-content:center;align-items:flex-end;width:44px;height:44px;background:none;border:none;padding:0" data-nav-burger>
+        <span style="display:block;width:24px;height:1.5px;background:#2F4156"></span>
+        <span style="display:block;width:16px;height:1.5px;background:#2F4156"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="Menu" style="position:fixed;inset:0;z-index:150;background:#2F4156;color:#F5F0EB;padding:clamp(20px,5vw,44px);display:flex;flex-direction:column">
+    <div style="display:flex;align-items:center;justify-content:space-between;height:clamp(44px,8vh,60px)">
+      <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:24px;color:#F5F0EB">ForkLore</span>
+      <button type="button" onClick="{{ toggleDrawer }}" aria-label="Close menu" style="background:none;border:none;color:#F5F0EB;font-size:26px;line-height:1;width:44px;height:44px">&#215;</button>
+    </div>
+    <nav aria-label="Mobile" style="display:flex;flex-direction:column;gap:2px;margin-top:auto;margin-bottom:auto">
+      <sc-for list="{{ nav }}" as="item" hint-placeholder-count="6">
+        <a href="{{ item.href }}" onClick="{{ closeDrawer }}" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(30px,8vw,44px);color:#F5F0EB;padding:10px 0;border-bottom:1px solid rgba(245,240,235,.16)" style-hover="color:#C8D9E6">{{ item.label }}</a>
+      </sc-for>
+    </nav>
+    <a href="#/start" onClick="{{ closeDrawer }}" style="display:block;text-align:center;background:#F5F0EB;color:#2F4156;padding:18px;border-radius:999px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:600">Start my plan &#8594;</a>
+  </div>
+</sc-if>
+
+<main id="main">
+
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div>
+
+  <section style="position:relative;overflow:hidden;background:#F5F0EB;padding:clamp(48px,7vh,86px) clamp(18px,6vw,72px) clamp(56px,8vh,96px)">
+    <div style="position:absolute;top:-8%;right:-6%;width:46vw;height:46vw;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(86,124,141,.22),rgba(86,124,141,0) 68%);pointer-events:none"></div>
+    <div style="position:relative;display:grid;grid-template-columns:1fr;gap:clamp(34px,5vw,64px);align-items:center;max-width:1500px;margin:0 auto" data-hero-grid>
+      <div style="position:relative;z-index:2">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:clamp(20px,3vh,32px)" data-anim="left">
+          <span style="width:34px;height:1px;background:#567C8D;display:block"></span>
+          <span style="font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#2F4156;font-weight:600">A structured nutrition system</span>
+        </div>
+        <h1 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(44px,7.4vw,104px);line-height:.94;letter-spacing:-.025em;color:#2F4156;max-width:15ch">
+          <span data-anim="rise" style="display:inline-block">Stop</span>
+          <span data-anim="rise" data-delay="90" style="display:inline-block">thinking</span>
+          <span data-anim="rise" data-delay="180" style="display:inline-block;position:relative">about
+            <svg data-draw viewBox="0 0 200 16" aria-hidden="true" fill="none" stroke="#567C8D" stroke-width="3.2" stroke-linecap="round" preserveAspectRatio="none" style="position:absolute;left:-2%;bottom:-.12em;width:104%;height:.22em;overflow:visible">
+              <path d="M2 9C42 3 62 13 100 7C140 1 160 13 198 6"></path>
+            </svg>
+          </span>
+          <span data-anim="rise" data-delay="270" style="display:inline-block">what to eat.</span>
+        </h1>
+        <p data-anim data-delay="360" style="margin-top:clamp(22px,3vh,34px);font-size:clamp(16px,1.28vw,19.5px);line-height:1.62;color:#2F4156;max-width:46ch">ForkLore turns your fitness goal into a simple daily nutrition system — planned meals, controlled portions and clear nutrition, without the constant decisions.</p>
+        <div data-anim data-delay="450" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:clamp(28px,4vh,42px)">
+          <a href="#/start" style="display:inline-flex;align-items:center;gap:12px;background:#2F4156;color:#F5F0EB;padding:18px 30px;border-radius:999px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s,transform .4s" style-hover="background:#2F4156;color:#F5F0EB;transform:translateY(-3px)">Build my plan &#8594;</a>
+          <a href="#/how-it-works" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(47,65,86,.4);color:#2F4156;padding:18px 30px;border-radius:999px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s,border-color .4s" style-hover="background:#C8D9E6;border-color:#2F4156;color:#2F4156">See how it works</a>
+        </div>
+        <div data-anim data-delay="540" style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(14px,2vw,26px);margin-top:clamp(34px,5vh,54px);padding-top:22px;padding-right:clamp(56px,6vw,80px);border-top:1px solid rgba(47,65,86,.18)">
+          <svg data-draw data-speed="1000" viewBox="0 0 170 180" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2F4156" stroke-width="2.4" style="position:absolute;right:0;bottom:6px;width:clamp(46px,5vw,66px);height:auto;opacity:.9;overflow:visible">
+            <g transform="rotate(-15 60 90)">
+              <path d="M12 8L12 48C12 66 22 78 32 80C42 78 52 66 52 48L52 8"></path>
+              <path d="M22 8L22 46"></path><path d="M42 8L42 46"></path>
+              <path d="M32 80C31 116 32 146 32 170"></path>
+            </g>
+            <g transform="rotate(15 112 90)">
+              <path d="M112 10C128 10 136 28 134 46C132 64 124 76 112 76C100 76 92 64 90 46C88 28 96 10 112 10"></path>
+              <path d="M112 76C111 112 112 144 112 170"></path>
+            </g>
+          </svg>
+          <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#2F4156;font-weight:600">Fixed recipes</span>
+          <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#567C8D;font-weight:600">Controlled portions</span>
+          <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#2F4156;font-weight:600">Clear nutrition</span>
+        </div>
+      </div>
+
+      <div style="position:relative">
+        <div data-parallax="-26" style="position:relative;aspect-ratio:4/5;background:#C8D9E6;border:1px solid rgba(47,65,86,.22);border-radius:3px;overflow:hidden">
+          <image-slot id="fl-hero" shape="rect" fit="cover" placeholder="HERO — full ForkLore plate, overhead, daylight: chicken tikka + jeera brown rice + roasted vegetables"></image-slot>
+        </div>
+        <div data-bob style="position:absolute;top:clamp(10px,3vw,26px);left:clamp(-10px,-2vw,-4px);background:#F5F0EB;border:1px solid #2F4156;border-radius:2px;padding:10px 14px;animation:fl-bob 7s ease-in-out infinite">
+          <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#2F4156;line-height:1.1">chicken tikka</span>
+          <span style="display:block;font-size:11px;letter-spacing:.14em;font-weight:700;color:#567C8D">200g &#183; 42g PROTEIN</span>
+        </div>
+        <div data-parallax="34" style="position:absolute;bottom:clamp(-14px,-2vw,-6px);right:clamp(-6px,-1vw,0px);background:#2F4156;color:#F5F0EB;border-radius:2px;padding:12px 16px">
+          <span style="display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#C8D9E6;font-weight:600">Plate total</span>
+          <span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(22px,2.4vw,30px);line-height:1.1">520 kcal</span>
+        </div>
+        <svg data-draw data-speed="1300" viewBox="0 0 200 150" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2F4156" stroke-width="2.2" data-parallax="18" style="position:absolute;right:clamp(-18px,-2vw,-6px);bottom:clamp(-22px,-3vw,-10px);width:clamp(112px,15vw,196px);height:auto;overflow:visible">
+          <path d="M18 54C58 40 142 40 182 54"></path>
+          <path d="M22 56C28 112 60 138 100 138C140 138 172 112 178 56"></path>
+          <path d="M40 63C70 77 130 77 160 63"></path>
+          <path d="M84 30C96 22 76 14 88 4"></path>
+          <path d="M116 32C128 24 108 16 120 6"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="The problem" style="background:#C8D9E6;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px);position:relative;overflow:hidden">
+    <div style="max-width:1400px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:1fr;gap:clamp(30px,4vw,60px);align-items:end;margin-bottom:clamp(44px,6vh,80px)" data-split>
+        <div>
+          <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#2F4156;font-weight:600;margin-bottom:18px">01 &#8212; The problem</span>
+          <h2 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.6vw,66px);line-height:1.02;letter-spacing:-.02em;color:#2F4156;max-width:22ch">Fitness shouldn't mean thinking about food all day.</h2>
+        </div>
+        <p data-anim data-delay="200" style="font-size:clamp(15px,1.1vw,17.5px);line-height:1.66;color:#2F4156;max-width:40ch">Most people don't fail at nutrition because they lack willpower. They fail because every single day asks them the same three questions, and answering them correctly takes information they don't have time to gather.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(14px,2vw,26px)">
+        <sc-for list="{{ problems }}" as="q" hint-placeholder-count="3">
+          <div data-anim="rise" data-delay="{{ q.delay }}" style="position:relative;background:#F5F0EB;border:1px solid rgba(47,65,86,.2);border-radius:3px;padding:clamp(26px,3vw,40px) clamp(22px,2.4vw,34px) clamp(34px,4vw,52px);min-height:clamp(180px,22vh,250px);display:flex;flex-direction:column;justify-content:space-between;transition:transform .5s,background .5s" style-hover="transform:translateY(-6px);background:#F5F0EB">
+            <span style="font-family:'Caveat','Kalam',cursive;font-size:14px;color:#567C8D">{{ q.tag }}</span>
+            <h3 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(22px,2.3vw,32px);line-height:1.12;color:#2F4156;max-width:14ch">{{ q.text }}</h3>
+          </div>
+        </sc-for>
+      </div>
+      <div style="position:relative;display:flex;justify-content:center;margin-top:clamp(30px,4vh,52px)">
+        <svg data-draw data-speed="1500" viewBox="0 0 600 90" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2F4156" stroke-width="2.2" style="width:min(100%,620px);height:auto;overflow:visible">
+          <path d="M8 30C150 14 300 46 460 30C500 26 530 30 560 40"></path>
+          <path d="M540 26L566 40L542 56"></path>
+        </svg>
+      </div>
+      <p data-anim style="margin-top:clamp(18px,2.5vh,30px);font-family:'Caveat','Kalam',cursive;font-size:clamp(18px,1.8vw,26px);color:#2F4156;text-align:center">Three questions &#215; three meals &#215; every day. That's the real workload.</p>
+    </div>
+  </section>
+
+  <section aria-label="The ForkLore system" style="background:#2F4156;color:#F5F0EB;padding:clamp(70px,12vh,150px) clamp(18px,6vw,72px);position:relative;overflow:hidden">
+    <div style="max-width:1400px;margin:0 auto">
+      <div style="text-align:center;max-width:60ch;margin:0 auto clamp(50px,7vh,90px)">
+        <span data-anim style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#C8D9E6;font-weight:600;margin-bottom:20px">02 &#8212; The system</span>
+        <h2 data-anim data-delay="120" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,5.2vw,76px);line-height:1;letter-spacing:-.02em;color:#F5F0EB">One system. Zero daily decisions.</h2>
+        <p data-anim data-delay="240" style="margin-top:22px;font-size:clamp(15px,1.1vw,18px);line-height:1.66;color:#C8D9E6">Every decision food normally asks of you happens once, upstream, inside the system. What reaches you is a plate.</p>
+      </div>
+      <div data-anim style="display:flex;justify-content:center;margin-bottom:clamp(26px,4vh,46px)">
+        <svg data-draw data-speed="1700" viewBox="0 0 620 60" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#C8D9E6" stroke-width="2.4" style="width:min(100%,700px);height:auto;overflow:visible">
+          <path d="M8 32C150 16 300 44 470 28C510 24 552 28 596 26"></path>
+          <path d="M576 12L600 26L578 42"></path>
+        </svg>
+      </div>
+      <ol style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:clamp(10px,1.4vw,20px);counter-reset:s">
+        <sc-for list="{{ system }}" as="s" hint-placeholder-count="6">
+          <li data-anim="rise" data-delay="{{ s.delay }}" style="position:relative;border:1px solid rgba(245,240,235,.24);border-radius:3px;padding:clamp(20px,2.2vw,30px);min-height:clamp(150px,20vh,220px);display:flex;flex-direction:column;justify-content:space-between;gap:16px;background:rgba(245,240,235,.03);transition:background .5s,border-color .5s" style-hover="background:rgba(245,240,235,.09);border-color:#C8D9E6">
+            <span style="font-size:11px;letter-spacing:.2em;font-weight:700;color:#C8D9E6">{{ s.num }}</span>
+            <div>
+              <h3 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(21px,2.2vw,30px);line-height:1.06;color:#F5F0EB;margin-bottom:8px">{{ s.title }}</h3>
+              <p style="font-size:13.5px;line-height:1.55;color:#C8D9E6">{{ s.body }}</p>
+            </div>
+          </li>
+        </sc-for>
+      </ol>
+      <div data-anim style="margin-top:clamp(40px,5vh,70px);display:flex;justify-content:center">
+        <a href="#/how-it-works" style="display:inline-flex;align-items:center;gap:12px;background:#F5F0EB;color:#2F4156;padding:18px 32px;border-radius:999px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s,transform .4s" style-hover="background:#C8D9E6;color:#2F4156;transform:translateY(-3px)">Walk through the system &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="What you see is what you eat" style="background:#F5F0EB;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px);overflow:hidden">
+    <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(34px,5vw,70px);align-items:center" data-split>
+      <div data-anim="left">
+        <span style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:18px">03 &#8212; Transparency</span>
+        <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,4.8vw,68px);line-height:1.02;letter-spacing:-.02em;color:#2F4156;max-width:18ch">What you see is what you eat.</h2>
+        <p style="margin-top:22px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.66;color:#2F4156;max-width:44ch">Fixed recipes, weighed components, the same numbers every time. Nothing about your plate is estimated after the fact.</p>
+        <div style="margin-top:clamp(26px,3.5vh,40px);display:grid;gap:2px">
+          <sc-for list="{{ transparency }}" as="t" hint-placeholder-count="4">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid rgba(47,65,86,.18)">
+              <span style="font-size:clamp(15px,1.15vw,18px);color:#2F4156;font-weight:500">{{ t.name }}</span>
+              <span style="font-family:'Caveat','Kalam',cursive;font-size:15px;color:#567C8D;white-space:nowrap">{{ t.note }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <a href="#/nutrition" style="display:inline-flex;align-items:center;gap:10px;margin-top:clamp(26px,3.5vh,40px);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#2F4156;border-bottom:1px solid #567C8D;padding-bottom:6px">Open the nutrition system &#8594;</a>
+      </div>
+      <div data-anim="scale" style="position:relative">
+        <div style="aspect-ratio:1/1;background:#C8D9E6;border:1px solid rgba(47,65,86,.22);border-radius:3px;overflow:hidden">
+          <image-slot id="fl-transparency" shape="rect" fit="cover" placeholder="FLAT LAY — weighed raw components on a bone surface: paneer, brown rice, greens, dal, small scale"></image-slot>
+        </div>
+        <svg data-draw data-speed="1000" viewBox="0 0 160 60" aria-hidden="true" fill="none" stroke="#2F4156" stroke-width="1.6" stroke-linecap="round" style="position:absolute;right:-4%;top:-8%;width:34%;height:auto;overflow:visible">
+          <path d="M6 30V6M6 18H154M154 30V6"></path>
+        </svg>
+        <span data-anim style="position:absolute;right:-2%;top:-14%;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#2F4156">weighed, not guessed</span>
+      </div>
+    </div>
+  </section>
+
+  <div aria-hidden="true" style="background:#2F4156;color:#F5F0EB;padding:clamp(16px,2.4vh,26px) 0;overflow:hidden;white-space:nowrap">
+    <div data-marquee style="display:inline-flex;gap:clamp(24px,4vw,60px);animation:fl-marquee 34s linear infinite;will-change:transform">
+      <sc-for list="{{ ticker }}" as="t" hint-placeholder-count="10">
+        <span style="font-size:clamp(11px,1vw,13px);letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:#F5F0EB">{{ t }}</span>
+      </sc-for>
+    </div>
+  </div>
+
+  <section aria-label="Meal plans" style="background:#C8D9E6;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px)">
+    <div style="max-width:1400px;margin:0 auto">
+      <div style="display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:clamp(36px,5vh,60px)">
+        <div>
+          <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#2F4156;font-weight:600;margin-bottom:18px">04 &#8212; Plans</span>
+          <h2 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.6vw,64px);line-height:1.02;letter-spacing:-.02em;color:#2F4156;max-width:20ch">You choose the goal. We handle the rest.</h2>
+        </div>
+        <a data-anim="right" href="#/meal-plans" style="font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#2F4156;border-bottom:1px solid #2F4156;padding-bottom:6px">All plans &#8594;</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(14px,1.8vw,24px)">
+        <sc-for list="{{ planPreview }}" as="p" hint-placeholder-count="3">
+          <a href="#/meal-plans" data-anim="rise" data-delay="{{ p.delay }}" style="display:block;background:#F5F0EB;border:1px solid rgba(47,65,86,.2);border-radius:3px;overflow:hidden;transition:transform .5s,border-color .5s" style-hover="transform:translateY(-8px);border-color:#567C8D;color:#2F4156">
+            <div style="aspect-ratio:5/4;background:#C8D9E6;overflow:hidden">
+              <image-slot id="{{ p.slot }}" shape="rect" fit="cover" placeholder="{{ p.ph }}"></image-slot>
+            </div>
+            <div style="padding:clamp(22px,2.4vw,32px)">
+              <span style="display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#567C8D;font-weight:700;margin-bottom:12px">{{ p.kicker }}</span>
+              <h3 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(24px,2.4vw,34px);line-height:1.04;color:#2F4156">{{ p.name }}</h3>
+              <p style="margin-top:12px;font-size:14px;line-height:1.6;color:#2F4156">{{ p.line }}</p>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="On the menu" style="background:#F5F0EB;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px);overflow:hidden">
+    <div style="max-width:1400px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:1fr;gap:clamp(24px,4vw,60px);align-items:center" data-split>
+        <div data-anim="scale" style="position:relative;aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden">
+          <image-slot id="fl-menu-a" shape="rect" fit="cover" placeholder="EDITORIAL — millet khichdi in a dark bowl, side of cucumber raita, close crop, natural light"></image-slot>
+        </div>
+        <div>
+          <span data-anim style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:18px">05 &#8212; The food</span>
+          <h2 data-anim data-delay="100" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.6vw,64px);line-height:1.02;letter-spacing:-.02em;color:#2F4156;max-width:16ch">Indian food, built to a number.</h2>
+          <p data-anim data-delay="200" style="margin-top:22px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.66;color:#2F4156;max-width:42ch">Rajma and rice. Chana salad. Paneer tikka. The food you already want to eat, cooked to a fixed recipe so the nutrition holds every time.</p>
+          <div data-anim data-delay="300" style="margin-top:clamp(24px,3vh,36px);position:relative;aspect-ratio:5/4;background:#C8D9E6;border-radius:3px;overflow:hidden">
+            <image-slot id="fl-menu-b" shape="rect" fit="cover" placeholder="EDITORIAL — tandoori chicken with charred edges, lemon, sliced onion, dark plate"></image-slot>
+          </div>
+          <a data-anim href="#/meal-plans" style="display:inline-flex;align-items:center;gap:10px;margin-top:clamp(24px,3vh,36px);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#2F4156;border-bottom:1px solid #567C8D;padding-bottom:6px">See the plans &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Consistency" style="background:#2F4156;color:#FFFFFF;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px)">
+    <div style="max-width:1400px;margin:0 auto">
+      <div style="max-width:52ch;margin-bottom:clamp(40px,5vh,70px)">
+        <span data-anim style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#C8D9E6;font-weight:700;margin-bottom:18px">06 &#8212; Consistency</span>
+        <h2 data-anim data-delay="100" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,4.8vw,68px);line-height:1.02;letter-spacing:-.02em;color:#FFFFFF">A plan is not the hard part. Repeating it is.</h2>
+        <p data-anim data-delay="200" style="margin-top:22px;font-size:clamp(15px,1.1vw,18px);line-height:1.66;color:#C8D9E6">So the system doesn't end at delivery. It follows a twelve-week arc, and it adjusts.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:2px;border-top:1px solid rgba(255,255,255,.3)">
+        <sc-for list="{{ journey }}" as="j" hint-placeholder-count="4">
+          <div data-anim="rise" data-delay="{{ j.delay }}" style="padding:clamp(24px,3vw,40px) clamp(16px,1.6vw,24px);border-bottom:1px solid rgba(255,255,255,.3);border-right:1px solid rgba(255,255,255,.18)">
+            <span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(28px,3.2vw,44px);line-height:1;color:#C8D9E6">{{ j.weeks }}</span>
+            <h3 style="margin-top:14px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#FFFFFF">{{ j.label }}</h3>
+            <p style="margin-top:12px;font-size:13.5px;line-height:1.58;color:#C8D9E6">{{ j.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Get started" style="background:#F5F0EB;padding:clamp(80px,14vh,170px) clamp(18px,6vw,72px);text-align:center;position:relative;overflow:hidden">
+    <div style="position:relative;max-width:900px;margin:0 auto">
+      <svg data-draw data-speed="1100" viewBox="0 0 300 120" aria-hidden="true" fill="none" stroke="#567C8D" stroke-width="1.8" stroke-linecap="round" style="width:clamp(120px,16vw,220px);height:auto;margin:0 auto clamp(20px,3vh,34px);display:block;overflow:visible">
+        <path d="M10 34C60 20 240 20 290 34"></path>
+        <path d="M18 34C18 84 78 112 150 112C222 112 282 84 282 34"></path>
+        <path d="M150 112V56"></path>
+        <path d="M124 62C132 48 168 48 176 62"></path>
+      </svg>
+      <h2 data-anim style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(34px,6vw,86px);line-height:.98;letter-spacing:-.025em;color:#2F4156">The story your body needs.</h2>
+      <p data-anim data-delay="120" style="margin-top:22px;font-size:clamp(15px,1.15vw,18.5px);line-height:1.62;color:#2F4156;max-width:46ch;margin-left:auto;margin-right:auto">Answer five short questions. See the plan take shape before you commit to anything.</p>
+      <a data-anim data-delay="220" href="#/start" style="display:inline-flex;align-items:center;gap:12px;margin-top:clamp(28px,4vh,44px);background:#2F4156;color:#F5F0EB;padding:20px 36px;border-radius:999px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s,transform .4s" style-hover="background:#2F4156;color:#F5F0EB;transform:translateY(-3px)">Build my plan &#8594;</a>
+    </div>
+  </section>
+
+</div>
+</sc-if>
+
+<sc-if value="{{ isHow }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#F5F0EB;padding:clamp(56px,9vh,110px) clamp(18px,6vw,72px) clamp(40px,6vh,80px);border-bottom:1px solid rgba(47,65,86,.18);overflow:hidden">
+    <div style="position:relative;max-width:1400px;margin:0 auto">
+      <svg data-draw data-speed="1300" viewBox="0 0 130 180" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2F4156" stroke-width="2.6" data-parallax="16" style="position:absolute;right:clamp(0px,3vw,50px);top:clamp(-6px,0vw,10px);width:clamp(66px,8.5vw,132px);height:auto;overflow:visible;pointer-events:none">
+        <path d="M42 68L49 150C50 158 54 158 60 158L70 158C76 158 80 158 81 150L88 68"></path>
+        <path d="M36 68C55 60 75 60 94 68"></path>
+        <path d="M46 86C60 80 70 80 84 86"></path>
+        <path d="M57 54C65 44 49 38 59 26C63 22 61 17 58 13"></path>
+        <path d="M79 54C87 44 71 38 81 26C85 22 83 17 80 13"></path>
+      </svg>
+      <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:20px">How it works</span>
+      <h1 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(40px,7vw,100px);line-height:.96;letter-spacing:-.025em;color:#2F4156;max-width:17ch">Six steps. Then it runs itself.</h1>
+      <p data-anim data-delay="200" style="margin-top:clamp(22px,3vh,34px);font-size:clamp(15px,1.15vw,18.5px);line-height:1.64;color:#2F4156;max-width:48ch">Scroll once, all the way down. The same plate carries through every step — from a goal you pick to a number you can trust.</p>
+    </div>
+  </section>
+
+  <section data-scene aria-label="Step one: your goal" style="--p:.82;position:relative;height:180vh;background:#F5F0EB">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+      <div style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
+        <div>
+          <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#567C8D;font-weight:700;margin-bottom:16px">Step 01</span>
+          <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(34px,5.2vw,74px);line-height:.98;letter-spacing:-.02em;color:#2F4156">Your goal</h2>
+          <p style="margin-top:20px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.64;color:#2F4156;max-width:38ch">You pick one thing. Everything downstream is derived from it — not negotiated with you again tomorrow.</p>
+          <p style="margin-top:18px;font-family:'Caveat','Kalam',cursive;font-size:clamp(17px,1.5vw,22px);color:#567C8D;opacity:calc(var(--p) * 3 - 0.9)">&#8595; and it becomes a nutrition profile</p>
+        </div>
+        <div style="position:relative;aspect-ratio:1/1;max-width:min(88vw,540px);margin:0 auto;width:100%">
+          <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:calc(1.5 - var(--p) * 3.4);transform:scale(calc(1 - var(--p) * 0.12))">
+            <svg data-draw data-speed="900" viewBox="0 0 300 300" aria-hidden="true" fill="none" stroke="#2F4156" stroke-width="2" stroke-linecap="round" style="width:100%;height:100%;overflow:visible">
+              <path d="M150 18C77 18 18 77 18 150C18 223 77 282 150 282C223 282 282 223 282 150C282 77 223 18 150 18C120 18 92 28 70 46"></path>
+              <path d="M150 74C108 74 74 108 74 150C74 192 108 226 150 226C192 226 226 192 226 150C226 110 194 76 154 74"></path>
+              <path d="M150 128C138 128 128 138 128 150C128 162 138 172 150 172C162 172 172 162 172 150C172 139 163 129 152 128"></path>
+              <path d="M232 60L166 132"></path>
+              <path d="M226 84L232 58L206 64"></path>
+            </svg>
+          </div>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;gap:clamp(10px,1.6vh,18px);opacity:calc(var(--p) * 3 - 1);transform:translateY(calc((1 - var(--p)) * 40px))">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:12px;border-bottom:1px solid rgba(47,65,86,.3)">
+              <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#2F4156">Nutrition profile</span>
+              <span style="font-family:'Caveat','Kalam',cursive;font-size:15px;color:#567C8D">fat loss</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="display:flex;justify-content:space-between;font-size:13px;letter-spacing:.06em;color:#2F4156"><span>PROTEIN</span><span>150 g</span></div>
+              <div style="height:9px;background:rgba(47,65,86,.16);border-radius:2px;overflow:hidden"><div style="height:100%;background:#2F4156;width:calc((var(--p) * 2 - 0.6) * 88%)"></div></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="display:flex;justify-content:space-between;font-size:13px;letter-spacing:.06em;color:#2F4156"><span>CARBOHYDRATE</span><span>180 g</span></div>
+              <div style="height:9px;background:rgba(47,65,86,.16);border-radius:2px;overflow:hidden"><div style="height:100%;background:#567C8D;width:calc((var(--p) * 2 - 0.75) * 76%)"></div></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="display:flex;justify-content:space-between;font-size:13px;letter-spacing:.06em;color:#2F4156"><span>FAT</span><span>55 g</span></div>
+              <div style="height:9px;background:rgba(47,65,86,.16);border-radius:2px;overflow:hidden"><div style="height:100%;background:#C8D9E6;width:calc((var(--p) * 2 - 0.9) * 46%)"></div></div>
+            </div>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:8px;padding-top:14px;border-top:1px solid rgba(47,65,86,.3)">
+              <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#2F4156">Daily target</span>
+              <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(26px,3vw,40px);line-height:1;color:#2F4156">1,780 kcal</span>
+            </div>
+            <p style="font-size:12px;line-height:1.5;color:#2F4156;opacity:.75">Illustrative figures. Your profile is set from your own answers, and can be reviewed with a professional where needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-scene aria-label="Step two: your plan" style="--p:.82;position:relative;height:180vh;background:#C8D9E6">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+      <div style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
+        <div>
+          <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#2F4156;font-weight:700;margin-bottom:16px">Step 02</span>
+          <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(34px,5.2vw,74px);line-height:.98;letter-spacing:-.02em;color:#2F4156">Your plan</h2>
+          <p style="margin-top:20px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.64;color:#2F4156;max-width:38ch">The profile turns into a structure: which meals, on which days, at what size. This is the part people normally rebuild from scratch every morning.</p>
+          <p style="margin-top:18px;font-family:'Caveat','Kalam',cursive;font-size:clamp(17px,1.5vw,22px);color:#2F4156;opacity:calc(var(--p) * 3 - 1.1)">a week, decided once &#8594;</p>
+        </div>
+        <div style="position:relative;width:100%;max-width:min(92vw,560px);margin:0 auto;background:#F5F0EB;border:1px solid rgba(47,65,86,.24);border-radius:3px;padding:clamp(18px,2.2vw,30px)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;padding-bottom:14px;margin-bottom:16px;border-bottom:1px solid rgba(47,65,86,.22)">
+            <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#2F4156">Week structure</span>
+            <span style="font-size:11px;letter-spacing:.14em;color:#567C8D;font-weight:700">LUNCH + DINNER</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(6px,.8vw,10px)">
+            <div style="aspect-ratio:1/1.15;background:#C8D9E6;border-radius:2px;padding:8px;display:flex;flex-direction:column;justify-content:space-between;opacity:calc(var(--p) * 6 - 0.5)"><span style="font-size:9.5px;letter-spacing:.14em;font-weight:700;color:#2F4156">MON</span><span style="font-family:'Caveat','Kalam',cursive;font-size:12.5px;line-height:1.1;color:#2F4156">chicken tikka</span></div>
+            <div style="aspect-ratio:1/1.15;background:#C8D9E6;border-radius:2px;padding:8px;display:flex;flex-direction:column;justify-content:space-between;opacity:calc(var(--p) * 6 - 0.9)"><span style="font-size:9.5px;letter-spacing:.14em;font-weight:700;color:#2F4156">TUE</span><span style="font-family:'Caveat','Kalam',cursive;font-size:12.5px;line-height:1.1;color:#2F4156">rajma + rice</span></div>
+            <div style="aspect-ratio:1/1.15;background:#C8D9E6;border-radius:2px;padding:8px;display:flex;flex-direction:column;justify-content:space-between;opacity:calc(var(--p) * 6 - 1.3)"><span style="font-size:9.5px;letter-spacing:.14em;font-weight:700;color:#2F4156">WED</span><span style="font-family:'Caveat','Kalam',cursive;font-size:12.5px;line-height:1.1;color:#2F4156">millet khichdi</span></div>
+            <div style="aspect-ratio:1/1.15;background:#C8D9E6;border-radius:2px;padding:8px;display:flex;flex-direction:column;justify-content:space-between;opacity:calc(var(--p) * 6 - 1.7)"><span style="font-size:9.5px;letter-spacing:.14em;font-weight:700;color:#2F4156">THU</span><span style="font-family:'Caveat','Kalam',cursive;font-size:12.5px;line-height:1.1;color:#2F4156">paneer tikka</span></div>
+            <div style="aspect-ratio:1/1.15;background:#567C8D;border-radius:2px;padding:8px;display:flex;flex-direction:column;justify-content:space-between;opacity:calc(var(--p) * 6 - 2.1)"><span style="font-size:9.5px;letter-spacing:.14em;font-weight:700;color:#2F4156">FRI</span><span style="font-family:'Caveat','Kalam',cursive;font-size:12.5px;line-height:1.1;color:#F5F0EB">dal + brown rice</span></div>
+            <div style="aspect-ratio:1/1.15;background:#C8D9E6;border-radius:2px;padding:8px;display:flex;flex-direction:column;justify-content:space-between;opacity:calc(var(--p) * 6 - 2.5)"><span style="font-size:9.5px;letter-spacing:.14em;font-weight:700;color:#2F4156">SAT</span><span style="font-family:'Caveat','Kalam',cursive;font-size:12.5px;line-height:1.1;color:#2F4156">veg pulao</span></div>
+            <div style="aspect-ratio:1/1.15;background:#C8D9E6;border-radius:2px;padding:8px;display:flex;flex-direction:column;justify-content:space-between;opacity:calc(var(--p) * 6 - 2.9)"><span style="font-size:9.5px;letter-spacing:.14em;font-weight:700;color:#2F4156">SUN</span><span style="font-family:'Caveat','Kalam',cursive;font-size:12.5px;line-height:1.1;color:#2F4156">chana salad</span></div>
+            <div style="aspect-ratio:1/1.15;border:1px dashed rgba(47,65,86,.4);border-radius:2px;padding:8px;display:flex;align-items:flex-end;opacity:calc(var(--p) * 6 - 3.3)"><span style="font-family:'Caveat','Kalam',cursive;font-size:12.5px;line-height:1.1;color:#2F4156">your call</span></div>
+          </div>
+          <div style="margin-top:16px;padding-top:14px;border-top:1px solid rgba(47,65,86,.22);display:flex;justify-content:space-between;align-items:baseline;opacity:calc(var(--p) * 4 - 2.4)">
+            <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#2F4156">Decisions left to you</span>
+            <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(26px,3vw,40px);line-height:1;color:#2F4156">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-scene aria-label="Step three: your meals" style="--p:.82;position:relative;height:190vh;background:#2F4156;color:#F5F0EB">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+      <div style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
+        <div>
+          <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#C8D9E6;font-weight:700;margin-bottom:16px">Step 03</span>
+          <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(34px,5.2vw,74px);line-height:.98;letter-spacing:-.02em;color:#F5F0EB">Your meals</h2>
+          <p style="margin-top:20px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.64;color:#C8D9E6;max-width:38ch">The structure stops being a diagram and becomes lunch. Cooked to a fixed recipe, portioned to your plan, in the food language you actually grew up eating.</p>
+          <p style="margin-top:18px;font-family:'Caveat','Kalam',cursive;font-size:clamp(17px,1.5vw,22px);color:#C8D9E6;opacity:calc(var(--p) * 3 - 1.2)">wednesday, 1:15pm</p>
+        </div>
+        <div style="position:relative;width:100%;max-width:min(92vw,560px);margin:0 auto;aspect-ratio:4/5">
+          <div style="position:absolute;inset:0;border:1px solid rgba(245,240,235,.3);border-radius:3px;display:flex;align-items:center;justify-content:center;opacity:calc(1.3 - var(--p) * 3)">
+            <span style="font-family:'Caveat','Kalam',cursive;font-size:clamp(20px,2.2vw,30px);color:#C8D9E6;text-align:center;padding:0 12%">wed / lunch<br>millet khichdi<br>+ raita</span>
+          </div>
+          <div style="position:absolute;inset:0;border-radius:3px;overflow:hidden;background:#2F4156;clip-path:inset(calc((1 - var(--p)) * 60%) 0 0 0)">
+            <image-slot id="fl-how-meal" shape="rect" fit="cover" placeholder="MEAL — millet khichdi with cucumber raita, steel tiffin alongside, warm daylight"></image-slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-scene aria-label="Step four: your nutrition" style="--p:.82;position:relative;height:200vh;background:#F5F0EB">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+      <div style="max-width:1400px;margin:0 auto;width:100%">
+        <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:clamp(24px,4vh,48px)">
+          <div>
+            <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#567C8D;font-weight:700;margin-bottom:14px">Step 04</span>
+            <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,5vw,70px);line-height:.98;letter-spacing:-.02em;color:#2F4156">Your nutrition</h2>
+          </div>
+          <p style="font-size:clamp(14px,1.05vw,17px);line-height:1.6;color:#2F4156;max-width:34ch">The plate comes apart. Every component has a weight, and every weight has a number attached to it.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(6px,1vw,16px)">
+          <div style="transform:translateY(calc((1 - var(--p)) * 22vh))">
+            <div style="aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden"><image-slot id="fl-dec-1" shape="rect" fit="cover" placeholder="COMPONENT — chicken tikka pieces"></image-slot></div>
+            <div style="padding-top:12px;opacity:calc(var(--p) * 3 - 1.2)">
+              <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">Chicken tikka</span>
+              <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#567C8D">200g</span>
+              <span style="display:block;margin-top:4px;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(18px,2vw,26px);color:#2F4156">42g protein</span>
+            </div>
+          </div>
+          <div style="transform:translateY(calc((1 - var(--p)) * -18vh))">
+            <div style="aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden"><image-slot id="fl-dec-2" shape="rect" fit="cover" placeholder="COMPONENT — jeera brown rice"></image-slot></div>
+            <div style="padding-top:12px;opacity:calc(var(--p) * 3 - 1.45)">
+              <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">Brown rice</span>
+              <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#567C8D">150g</span>
+              <span style="display:block;margin-top:4px;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(18px,2vw,26px);color:#2F4156">48g carbs</span>
+            </div>
+          </div>
+          <div style="transform:translateY(calc((1 - var(--p)) * 26vh))">
+            <div style="aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden"><image-slot id="fl-dec-3" shape="rect" fit="cover" placeholder="COMPONENT — roasted mixed vegetables"></image-slot></div>
+            <div style="padding-top:12px;opacity:calc(var(--p) * 3 - 1.7)">
+              <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">Vegetables</span>
+              <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#567C8D">100g</span>
+              <span style="display:block;margin-top:4px;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(18px,2vw,26px);color:#2F4156">fibre</span>
+            </div>
+          </div>
+          <div style="transform:translateY(calc((1 - var(--p)) * -14vh))">
+            <div style="aspect-ratio:3/4;background:#C8D9E6;border-radius:3px;overflow:hidden"><image-slot id="fl-dec-4" shape="rect" fit="cover" placeholder="COMPONENT — cucumber salad / raita"></image-slot></div>
+            <div style="padding-top:12px;opacity:calc(var(--p) * 3 - 1.95)">
+              <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">Salad</span>
+              <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#567C8D">80g</span>
+              <span style="display:block;margin-top:4px;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(18px,2vw,26px);color:#2F4156">volume</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:clamp(20px,3vh,36px);display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between;padding-top:18px;border-top:1px solid rgba(47,65,86,.3);opacity:calc(var(--p) * 4 - 2.7)">
+          <span style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#2F4156">Plate total</span>
+          <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(30px,4vw,58px);line-height:1;color:#2F4156">520 kcal &#183; 46P &#183; 54C &#183; 12F</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-scene aria-label="Step five: your routine" style="--p:.82;position:relative;height:170vh;background:#C8D9E6">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+      <div style="max-width:1400px;margin:0 auto;width:100%">
+        <div style="max-width:44ch;margin-bottom:clamp(26px,4vh,50px)">
+          <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#2F4156;font-weight:700;margin-bottom:14px">Step 05</span>
+          <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,5vw,70px);line-height:.98;letter-spacing:-.02em;color:#2F4156">Your routine</h2>
+          <p style="margin-top:18px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.64;color:#2F4156">One plate is a meal. The same plate, on a schedule, is a result.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:clamp(4px,.7vw,10px)">
+          <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">MON</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 0.2)"></div><div style="aspect-ratio:1/1;background:#2F4156;border-radius:2px;opacity:calc(var(--p) * 8 - 0.6)"></div></div>
+          <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">TUE</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 1)"></div><div style="aspect-ratio:1/1;background:#2F4156;border-radius:2px;opacity:calc(var(--p) * 8 - 1.4)"></div></div>
+          <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">WED</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 1.8)"></div><div style="aspect-ratio:1/1;background:#2F4156;border-radius:2px;opacity:calc(var(--p) * 8 - 2.2)"></div></div>
+          <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">THU</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 2.6)"></div><div style="aspect-ratio:1/1;background:#2F4156;border-radius:2px;opacity:calc(var(--p) * 8 - 3)"></div></div>
+          <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">FRI</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 3.4)"></div><div style="aspect-ratio:1/1;background:#2F4156;border-radius:2px;opacity:calc(var(--p) * 8 - 3.8)"></div></div>
+          <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">SAT</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 4.2)"></div><div style="aspect-ratio:1/1;border:1px dashed rgba(47,65,86,.45);border-radius:2px;opacity:calc(var(--p) * 8 - 4.6)"></div></div>
+          <div style="display:flex;flex-direction:column;gap:clamp(4px,.7vw,10px)"><span style="font-size:10px;letter-spacing:.12em;font-weight:700;color:#2F4156">SUN</span><div style="aspect-ratio:1/1;background:#567C8D;border-radius:2px;opacity:calc(var(--p) * 8 - 5)"></div><div style="aspect-ratio:1/1;border:1px dashed rgba(47,65,86,.45);border-radius:2px;opacity:calc(var(--p) * 8 - 5.4)"></div></div>
+        </div>
+        <p style="margin-top:clamp(18px,2.5vh,30px);font-family:'Caveat','Kalam',cursive;font-size:clamp(16px,1.6vw,22px);color:#2F4156;opacity:calc(var(--p) * 4 - 2.6)">two meals a day, five days &#8212; the weekend stays yours</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-scene aria-label="Step six: your progress" style="--p:.82;position:relative;height:190vh;background:#2F4156;color:#F5F0EB">
+    <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden">
+      <div style="max-width:1400px;margin:0 auto;width:100%">
+        <div style="max-width:46ch;margin-bottom:clamp(30px,4.5vh,56px)">
+          <span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#C8D9E6;font-weight:700;margin-bottom:14px">Step 06</span>
+          <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,5vw,70px);line-height:.98;letter-spacing:-.02em;color:#F5F0EB">Your progress</h2>
+          <p style="margin-top:18px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.64;color:#C8D9E6">Twelve weeks, four stages, and a check-in that changes the plan rather than your resolve.</p>
+        </div>
+        <div style="position:relative;height:3px;background:rgba(245,240,235,.22);margin-bottom:clamp(20px,3vh,34px)">
+          <div style="position:absolute;left:0;top:0;height:100%;background:#C8D9E6;width:calc(var(--p) * 118%)"></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:clamp(10px,1.6vw,24px)">
+          <div style="opacity:calc(var(--p) * 5 - 0.1)"><span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(24px,2.8vw,38px);line-height:1;color:#C8D9E6">01&#8211;02</span><h3 style="margin-top:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Foundation</h3><p style="margin-top:10px;font-size:13.5px;line-height:1.55;color:#C8D9E6">Meals start arriving. The routine forms before anything is tuned.</p></div>
+          <div style="opacity:calc(var(--p) * 5 - 1.1)"><span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(24px,2.8vw,38px);line-height:1;color:#C8D9E6">03&#8211;04</span><h3 style="margin-top:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Confirmation</h3><p style="margin-top:10px;font-size:13.5px;line-height:1.55;color:#C8D9E6">First check-in. The plan is confirmed against what actually happened.</p></div>
+          <div style="opacity:calc(var(--p) * 5 - 2.1)"><span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(24px,2.8vw,38px);line-height:1;color:#C8D9E6">05&#8211;08</span><h3 style="margin-top:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Momentum</h3><p style="margin-top:10px;font-size:13.5px;line-height:1.55;color:#C8D9E6">The daily decisions are gone. Eating on plan stops costing effort.</p></div>
+          <div style="opacity:calc(var(--p) * 5 - 3.1)"><span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(24px,2.8vw,38px);line-height:1;color:#C8D9E6">09&#8211;12</span><h3 style="margin-top:10px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Breakthrough</h3><p style="margin-top:10px;font-size:13.5px;line-height:1.55;color:#C8D9E6">The system is yours. The adjustments get small and the arc gets visible.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#F5F0EB;padding:clamp(70px,12vh,150px) clamp(18px,6vw,72px);text-align:center">
+    <h2 data-anim style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,5.4vw,76px);line-height:1;letter-spacing:-.02em;color:#2F4156;max-width:22ch;margin:0 auto">That's the whole system. Now pick a goal.</h2>
+    <div data-anim data-delay="150" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:clamp(28px,4vh,44px)">
+      <a href="#/start" style="display:inline-flex;align-items:center;gap:12px;background:#2F4156;color:#F5F0EB;padding:19px 34px;border-radius:999px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s,transform .4s" style-hover="background:#2F4156;color:#F5F0EB;transform:translateY(-3px)">Build my plan &#8594;</a>
+      <a href="#/nutrition" style="display:inline-flex;align-items:center;gap:12px;border:1px solid rgba(47,65,86,.4);padding:19px 34px;border-radius:999px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s" style-hover="background:#C8D9E6;color:#2F4156">The nutrition system</a>
+    </div>
+  </section>
+</div>
+</sc-if>
+<sc-if value="{{ isPlans }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#F5F0EB;padding:clamp(56px,9vh,110px) clamp(18px,6vw,72px) clamp(36px,5vh,64px);overflow:hidden">
+    <div style="position:relative;max-width:1400px;margin:0 auto">
+      <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:20px">Meal plans</span>
+      <h1 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(40px,7vw,100px);line-height:.96;letter-spacing:-.025em;color:#2F4156;max-width:16ch">You choose the goal. We handle the rest.</h1>
+      <p data-anim data-delay="180" style="margin-top:clamp(22px,3vh,34px);font-size:clamp(15px,1.15vw,18.5px);line-height:1.64;color:#2F4156;max-width:50ch">Five goals, one system underneath. The plan changes the portions, the frequency and the emphasis — never the honesty of the numbers.</p>
+      <svg data-draw data-speed="1600" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2F4156" stroke-width="2.2" style="position:absolute;right:clamp(-10px,1vw,40px);top:clamp(-10px,0vw,10px);width:clamp(96px,13vw,190px);height:auto;opacity:.9;overflow:visible">
+        <path d="M100 8C151 8 192 49 192 100C192 151 151 192 100 192C49 192 8 151 8 100C8 51 47 10 96 8"></path>
+        <path d="M100 30C139 30 170 61 170 100C170 139 139 170 100 170C61 170 30 139 30 100C30 62 60 32 98 30"></path>
+        <path d="M100 30C100 62 100 138 100 170"></path>
+        <path d="M100 100C132 100 152 100 170 100"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section style="background:#C8D9E6;padding:clamp(50px,8vh,100px) clamp(18px,6vw,72px) clamp(70px,11vh,140px)">
+    <div style="max-width:1400px;margin:0 auto;display:grid;gap:clamp(16px,2vw,28px);grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))">
+      <sc-for list="{{ plans }}" as="p" hint-placeholder-count="5">
+        <article data-card data-anim="rise" data-delay="{{ p.delay }}" style="background:#F5F0EB;border:1px solid rgba(47,65,86,.2);border-radius:3px;overflow:hidden;transition:border-color .5s,transform .5s" style-hover="border-color:#567C8D;transform:translateY(-5px)">
+          <div style="position:relative;aspect-ratio:16/11;overflow:hidden;background:#C8D9E6">
+            <div data-zoom style="position:absolute;inset:0"><image-slot id="{{ p.slot }}" shape="rect" fit="cover" placeholder="{{ p.ph }}"></image-slot></div>
+            <span data-onhover style="position:absolute;left:14px;bottom:14px;background:#F5F0EB;border:1px solid #2F4156;padding:6px 11px;font-family:'Caveat','Kalam',cursive;font-size:14px;color:#2F4156;pointer-events:none">{{ p.kicker }}</span>
+          </div>
+          <div style="padding:clamp(22px,2.4vw,34px)">
+            <h2 data-shift style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,2.6vw,38px);line-height:1.02;color:#2F4156">{{ p.name }}</h2>
+            <p style="margin-top:12px;font-size:14.5px;line-height:1.6;color:#2F4156">{{ p.line }}</p>
+            <div style="margin-top:20px;display:grid;gap:1px">
+              <div style="display:flex;gap:16px;justify-content:space-between;padding:11px 0;border-top:1px solid rgba(47,65,86,.18)">
+                <span style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#567C8D;flex:0 0 auto">Frequency</span>
+                <span style="font-size:13.5px;color:#2F4156;text-align:right">{{ p.freq }}</span>
+              </div>
+              <div style="display:flex;gap:16px;justify-content:space-between;padding:11px 0;border-top:1px solid rgba(47,65,86,.18)">
+                <span style="font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#567C8D;flex:0 0 auto">Food style</span>
+                <span style="font-size:13.5px;color:#2F4156;text-align:right">{{ p.style }}</span>
+              </div>
+            </div>
+            <button type="button" onClick="{{ p.toggle }}" aria-expanded="{{ p.open }}" style="margin-top:20px;width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:12px;background:none;border:none;border-top:1px solid rgba(47,65,86,.18);padding:16px 0 0;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#2F4156">
+              <span>{{ p.label }}</span><span style="font-size:16px;color:#567C8D">&#8594;</span>
+            </button>
+            <sc-if value="{{ p.open }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-top:18px;padding:20px;background:#C8D9E6;border-radius:2px">
+                <span style="display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#2F4156">Nutrition approach</span>
+                <p style="margin-top:8px;font-size:14px;line-height:1.6;color:#2F4156">{{ p.approach }}</p>
+                <span style="display:block;margin-top:18px;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#2F4156">Example meals</span>
+                <div style="margin-top:10px;display:flex;flex-direction:column;gap:7px">
+                  <sc-for list="{{ p.meals }}" as="m" hint-placeholder-count="3">
+                    <span style="font-family:'Caveat','Kalam',cursive;font-size:16px;color:#2F4156">&#183; {{ m }}</span>
+                  </sc-for>
+                </div>
+                <a href="#/start" style="display:inline-flex;align-items:center;gap:10px;margin-top:20px;background:#2F4156;color:#F5F0EB;padding:14px 24px;border-radius:999px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600" style-hover="background:#2F4156;color:#F5F0EB">Start this plan &#8594;</a>
+              </div>
+            </sc-if>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+    <p data-anim style="max-width:1400px;margin:clamp(34px,5vh,56px) auto 0;font-size:13px;line-height:1.6;color:#2F4156;opacity:.8">Pricing is not published yet. Plans, frequencies and portion bands shown here are the product structure; final nutrition suitability may require professional review where a medical condition or restriction applies.</p>
+  </section>
+</div>
+</sc-if>
+<sc-if value="{{ isNutrition }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#F5F0EB;padding:clamp(56px,9vh,110px) clamp(18px,6vw,72px) clamp(40px,6vh,80px);overflow:hidden">
+    <div style="position:relative;max-width:1400px;margin:0 auto">
+      <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:20px">Nutrition system</span>
+      <svg data-draw data-speed="1400" viewBox="0 0 120 120" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#567C8D" stroke-width="2.8" data-parallax="18" style="position:absolute;right:clamp(2px,3vw,50px);top:clamp(-4px,0vw,12px);width:clamp(64px,7.5vw,118px);height:auto;overflow:visible;pointer-events:none">
+        <path d="M60 10A50 50 0 1 1 59 10"></path>
+        <path d="M60 23A37 37 0 1 1 59 23"></path>
+        <path d="M60 60L60 23"></path><path d="M60 60L92 42"></path><path d="M60 60L92 78"></path>
+        <path d="M60 60L60 97"></path><path d="M60 60L28 78"></path><path d="M60 60L28 42"></path>
+      </svg>
+      <h1 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(40px,7vw,100px);line-height:.96;letter-spacing:-.025em;color:#2F4156;max-width:17ch">Know what is actually on your plate.</h1>
+      <p data-anim data-delay="180" style="margin-top:clamp(22px,3vh,34px);font-size:clamp(15px,1.15vw,18.5px);line-height:1.64;color:#2F4156;max-width:50ch">Not a range. Not an estimate written after the fact. A plate built from weighed components, where the number was decided before the food was cooked.</p>
+      <p data-anim data-delay="300" style="margin-top:clamp(26px,3.5vh,40px);font-family:'Caveat','Kalam',cursive;font-size:clamp(18px,1.8vw,25px);color:#567C8D">keep scrolling &#8212; the plate comes apart</p>
+    </div>
+  </section>
+
+  <section data-scene aria-label="Meal deconstruction" style="--p:.82;position:relative;height:420vh;background:#2F4156;color:#F5F0EB">
+    <div data-stick style="position:sticky;top:0;height:100vh;overflow:hidden;--f:calc(min(1, max(0, (var(--p) - 0.08) * 3.2)) - min(1, max(0, (var(--p) - 0.9) * 9)))">
+      <div style="position:absolute;left:0;right:0;top:clamp(70px,11vh,120px);display:flex;justify-content:center;padding:0 6vw;text-align:center">
+        <div>
+          <span style="display:block;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:#C8D9E6">One plate, taken apart</span>
+          <h2 style="margin-top:12px;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(24px,3.2vw,44px);line-height:1.04;color:#F5F0EB">Chicken tikka, brown rice, vegetables, salad</h2>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:50%;top:52%;width:min(74vw,54vh);aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#2F4156;transform:translate(-50%,-50%) scale(calc(1 - var(--f) * 0.44));opacity:calc(1 - var(--f) * 0.62)">
+        <image-slot id="fl-nut-plate" shape="circle" fit="cover" placeholder="PLATE — assembled ForkLore meal, shot straight down on a round plate"></image-slot>
+      </div>
+
+      <div style="position:absolute;left:50%;top:52%;width:clamp(104px,16vmin,200px);transform:translate(calc(-50% + var(--f) * -31vmin), calc(-50% + var(--f) * -21vmin))">
+        <div style="aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#2F4156;opacity:calc(var(--f) * 1.6 - 0.25)"><image-slot id="fl-nut-1" shape="circle" fit="cover" placeholder="CHICKEN TIKKA — isolated on plain surface"></image-slot></div>
+        <div style="margin-top:10px;text-align:center;opacity:calc(var(--p) * 5 - 1.3)">
+          <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Chicken tikka</span>
+          <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#C8D9E6;opacity:calc(var(--p) * 5 - 2.2)">200 g</span>
+          <span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(17px,2vw,25px);color:#C8D9E6;opacity:calc(var(--p) * 5 - 3)">42g protein</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:50%;top:52%;width:clamp(104px,16vmin,200px);transform:translate(calc(-50% + var(--f) * 31vmin), calc(-50% + var(--f) * -21vmin))">
+        <div style="aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#2F4156;opacity:calc(var(--f) * 1.6 - 0.25)"><image-slot id="fl-nut-2" shape="circle" fit="cover" placeholder="JEERA BROWN RICE — isolated on plain surface"></image-slot></div>
+        <div style="margin-top:10px;text-align:center;opacity:calc(var(--p) * 5 - 1.45)">
+          <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Brown rice</span>
+          <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#C8D9E6;opacity:calc(var(--p) * 5 - 2.35)">150 g</span>
+          <span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(17px,2vw,25px);color:#C8D9E6;opacity:calc(var(--p) * 5 - 3.15)">48g carbs</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:50%;top:52%;width:clamp(104px,16vmin,200px);transform:translate(calc(-50% + var(--f) * -33vmin), calc(-50% + var(--f) * 22vmin))">
+        <div style="aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#2F4156;opacity:calc(var(--f) * 1.6 - 0.25)"><image-slot id="fl-nut-3" shape="circle" fit="cover" placeholder="ROASTED VEGETABLES — isolated on plain surface"></image-slot></div>
+        <div style="margin-top:10px;text-align:center;opacity:calc(var(--p) * 5 - 1.6)">
+          <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Vegetables</span>
+          <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#C8D9E6;opacity:calc(var(--p) * 5 - 2.5)">100 g</span>
+          <span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(17px,2vw,25px);color:#C8D9E6;opacity:calc(var(--p) * 5 - 3.3)">fibre</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:50%;top:52%;width:clamp(104px,16vmin,200px);transform:translate(calc(-50% + var(--f) * 33vmin), calc(-50% + var(--f) * 22vmin))">
+        <div style="aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#2F4156;opacity:calc(var(--f) * 1.6 - 0.25)"><image-slot id="fl-nut-4" shape="circle" fit="cover" placeholder="CUCUMBER SALAD — isolated on plain surface"></image-slot></div>
+        <div style="margin-top:10px;text-align:center;opacity:calc(var(--p) * 5 - 1.75)">
+          <span style="display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#F5F0EB">Salad</span>
+          <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:15px;color:#C8D9E6;opacity:calc(var(--p) * 5 - 2.65)">80 g</span>
+          <span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(17px,2vw,25px);color:#C8D9E6;opacity:calc(var(--p) * 5 - 3.45)">volume</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:50%;bottom:clamp(28px,5vh,64px);transform:translateX(-50%);width:min(90vw,620px);opacity:calc(var(--p) * 7 - 5.3)">
+        <div style="border:1px solid rgba(245,240,235,.35);border-radius:3px;padding:clamp(16px,2vw,26px);background:rgba(47,65,86,.55);backdrop-filter:blur(6px)">
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between">
+            <span style="font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#C8D9E6">Verified against the recipe</span>
+            <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(24px,3vw,40px);line-height:1;color:#F5F0EB">520 kcal</span>
+          </div>
+          <div style="margin-top:14px;display:flex;gap:clamp(12px,2vw,28px);flex-wrap:wrap">
+            <span style="font-size:12px;letter-spacing:.1em;font-weight:700;color:#C8D9E6">46 g PROTEIN</span>
+            <span style="font-size:12px;letter-spacing:.1em;font-weight:700;color:#C8D9E6">54 g CARBS</span>
+            <span style="font-size:12px;letter-spacing:.1em;font-weight:700;color:#C8D9E6">12 g FAT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#F5F0EB;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px)">
+    <div style="max-width:1400px;margin:0 auto">
+      <div style="display:grid;gap:clamp(24px,4vw,60px);align-items:end;margin-bottom:clamp(36px,5vh,60px)" data-split>
+        <div>
+          <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:18px">Transparency</span>
+          <h2 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(32px,5vw,72px);line-height:1;letter-spacing:-.02em;color:#2F4156;max-width:16ch">Know what's in your food.</h2>
+        </div>
+        <p data-anim data-delay="150" style="font-size:clamp(15px,1.1vw,17.5px);line-height:1.64;color:#2F4156;max-width:40ch">Open any component. What it is, how much of it there is, and what it contributes. Nothing here needs a footnote to make sense.</p>
+      </div>
+      <div style="border-top:1px solid rgba(47,65,86,.24)">
+        <sc-for list="{{ ingredients }}" as="g" hint-placeholder-count="6">
+          <div data-anim data-delay="{{ g.delay }}" style="border-bottom:1px solid rgba(47,65,86,.24)">
+            <button type="button" onClick="{{ g.toggle }}" aria-expanded="{{ g.open }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:20px;background:none;border:none;padding:clamp(20px,3vh,32px) 0;text-align:left;transition:padding-left .4s" style-hover="padding-left:10px">
+              <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(24px,3.2vw,44px);line-height:1.02;color:#2F4156">{{ g.name }}</span>
+              <span style="display:flex;align-items:baseline;gap:clamp(12px,2vw,26px);flex:0 0 auto">
+                <span style="font-family:'Caveat','Kalam',cursive;font-size:15px;color:#567C8D">{{ g.note }}</span>
+                <span style="font-size:22px;line-height:1;color:#2F4156;width:22px;text-align:right">{{ g.sign }}</span>
+              </span>
+            </button>
+            <sc-if value="{{ g.open }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:0 0 clamp(24px,3.5vh,40px);display:grid;gap:clamp(18px,3vw,44px)" data-split>
+                <div style="display:grid;gap:1px;align-content:start">
+                  <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="4">
+                    <div style="display:flex;gap:20px;justify-content:space-between;padding:12px 0;border-top:1px solid rgba(47,65,86,.16)">
+                      <span style="font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D;flex:0 0 auto;padding-top:3px">{{ r.k }}</span>
+                      <span style="font-size:15px;line-height:1.5;color:#2F4156;text-align:right">{{ r.v }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+                <div style="position:relative;aspect-ratio:16/10;border-radius:3px;overflow:hidden;background:#C8D9E6">
+                  <image-slot id="fl-ing-{{ g.id }}" shape="rect" fit="cover" placeholder="INGREDIENT — {{ g.name }}, raw or prepared, on a bone surface"></image-slot>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <p data-anim style="margin-top:clamp(34px,5vh,56px);font-size:13px;line-height:1.6;color:#2F4156;opacity:.8;max-width:64ch">Sourcing and supplier detail is not published yet and will not be invented here. Portion bands and macro contributions describe the recipe structure and will be confirmed with final published values.</p>
+    </div>
+  </section>
+
+  <section style="background:#2F4156;color:#FFFFFF;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px)">
+    <div style="max-width:1400px;margin:0 auto;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
+      <div>
+        <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#C8D9E6;font-weight:700;margin-bottom:18px">Verification</span>
+        <h2 data-anim style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.6vw,64px);line-height:1.02;letter-spacing:-.02em;color:#FFFFFF;max-width:18ch">The recipe is the control.</h2>
+        <p data-anim data-delay="150" style="margin-top:20px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.64;color:#C8D9E6;max-width:42ch">Because the recipe and the component weights are fixed, the nutrition value is a property of the dish rather than an estimate of the day. Change nothing, and nothing changes.</p>
+      </div>
+      <div data-anim="scale" style="display:grid;gap:2px">
+        <div style="background:#FFFFFF;color:#2F4156;padding:clamp(18px,2.2vw,28px);border-radius:2px"><span style="display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#567C8D">Step 01</span><p style="margin-top:8px;font-size:clamp(15px,1.2vw,19px);line-height:1.45">The recipe is written once, with component weights.</p></div>
+        <div style="background:#FFFFFF;color:#2F4156;padding:clamp(18px,2.2vw,28px);border-radius:2px"><span style="display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#567C8D">Step 02</span><p style="margin-top:8px;font-size:clamp(15px,1.2vw,19px);line-height:1.45">Macros are computed from those weights, not from a photograph.</p></div>
+        <div style="background:#567C8D;color:#FFFFFF;padding:clamp(18px,2.2vw,28px);border-radius:2px"><span style="display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#FFFFFF">Step 03</span><p style="margin-top:8px;font-size:clamp(15px,1.2vw,19px);line-height:1.45">The kitchen cooks to the recipe. That is the whole guarantee.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+<sc-if value="{{ isStory }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#F5F0EB;padding:clamp(56px,9vh,110px) clamp(18px,6vw,72px) clamp(50px,8vh,100px);text-align:center;overflow:hidden">
+    <div style="position:relative;max-width:1100px;margin:0 auto">
+      <svg data-draw data-speed="1500" viewBox="0 0 110 155" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#567C8D" stroke-width="2.6" data-parallax="14" style="position:absolute;right:clamp(-6px,2vw,20px);top:clamp(-18px,-2vw,-6px);width:clamp(52px,6vw,96px);height:auto;overflow:visible;pointer-events:none">
+        <path d="M56 150C53 108 55 62 61 16"></path>
+        <path d="M60 42C41 36 30 51 40 68C53 68 63 55 60 42"></path>
+        <path d="M60 74C82 67 93 83 82 100C67 100 57 87 60 74"></path>
+        <path d="M57 104C39 99 30 114 41 130C55 130 62 116 57 104"></path>
+      </svg>
+      <span data-anim style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:22px">Our story</span>
+      <h1 data-anim data-delay="100" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(38px,7.4vw,104px);line-height:.94;letter-spacing:-.03em;color:#2F4156">The story your body needs</h1>
+      <p data-anim data-delay="220" style="margin-top:clamp(22px,3vh,34px);font-size:clamp(15px,1.15vw,18.5px);line-height:1.66;color:#2F4156;max-width:52ch;margin-left:auto;margin-right:auto">ForkLore did not start as a food company. It started as an argument about how much of your day nutrition is allowed to take.</p>
+    </div>
+    <div data-anim="scale" data-delay="320" style="max-width:1400px;margin:clamp(40px,6vh,72px) auto 0;position:relative;aspect-ratio:2.2/1;min-height:260px;border-radius:3px;overflow:hidden;background:#C8D9E6">
+      <image-slot id="fl-story-hero" shape="rect" fit="cover" placeholder="STORY OPENER — hands plating an Indian meal in a working kitchen, unstaged, warm light"></image-slot>
+    </div>
+  </section>
+
+  <section style="background:#C8D9E6;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px);overflow:hidden">
+    <div style="max-width:1300px;margin:0 auto;display:grid;gap:clamp(30px,5vw,70px);align-items:center" data-split>
+      <div data-anim="left">
+        <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:clamp(18px,1.8vw,24px);color:#567C8D;margin-bottom:14px">chapter one</span>
+        <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.6vw,64px);line-height:1.02;letter-spacing:-.02em;color:#2F4156;max-width:14ch">Why we started</h2>
+        <p style="margin-top:20px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.7;color:#2F4156;max-width:44ch">Everyone we knew who was trying to get fitter was spending an absurd amount of attention on food. Not cooking it — deciding about it. Reading labels, rebuilding the same plate, guessing at portions, then losing the thread by Thursday.</p>
+        <p style="margin-top:16px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.7;color:#2F4156;max-width:44ch">The food wasn't the problem. The number of decisions was.</p>
+        <svg data-draw data-speed="1500" viewBox="0 0 140 170" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2F4156" stroke-width="2.2" style="margin-top:clamp(22px,3vh,34px);width:clamp(72px,8vw,108px);height:auto;display:block;overflow:visible">
+          <path d="M70 34C70 18 44 12 40 26"></path>
+          <path d="M70 34C70 18 96 12 100 26"></path>
+          <path d="M24 42C24 34 116 34 116 42"></path>
+          <path d="M24 42L24 68C24 76 116 76 116 68L116 42"></path>
+          <path d="M24 76L24 102C24 110 116 110 116 102L116 76"></path>
+          <path d="M24 110L24 136C24 144 116 144 116 136L116 110"></path>
+        </svg>
+      </div>
+      <div data-anim="right" style="position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden;background:#F5F0EB">
+        <image-slot id="fl-story-1" shape="rect" fit="cover" placeholder="CHAPTER 1 — a cluttered kitchen counter, notebook and steel dabbas, mid-morning"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#2F4156;color:#F5F0EB;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px);overflow:hidden">
+    <div style="max-width:1300px;margin:0 auto;display:grid;gap:clamp(30px,5vw,70px);align-items:center" data-split-wide>
+      <div data-anim="left" style="position:relative;aspect-ratio:4/5;border-radius:3px;overflow:hidden;background:#2F4156">
+        <image-slot id="fl-story-2" shape="rect" fit="cover" placeholder="CHAPTER 2 — an oversized restaurant-style curry beside a small weighed portion, contrast shot"></image-slot>
+      </div>
+      <div data-anim="right">
+        <span style="display:block;font-family:'Caveat','Kalam',cursive;font-size:clamp(18px,1.8vw,24px);color:#C8D9E6;margin-bottom:14px">chapter two</span>
+        <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.6vw,64px);line-height:1.02;letter-spacing:-.02em;color:#F5F0EB;max-width:14ch">What is broken</h2>
+        <p style="margin-top:20px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.7;color:#C8D9E6;max-width:44ch">Healthy food in India is usually sold in one of two forms. Either it is delicious and unmeasured, or it is measured and joyless — a bowl of something Western that nobody in the family recognises.</p>
+        <p style="margin-top:16px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.7;color:#C8D9E6;max-width:44ch">And almost nowhere does the number on the label survive contact with the kitchen. Portions drift. Recipes drift. Trust goes with them.</p>
+        <div style="margin-top:clamp(26px,3.5vh,40px);display:grid;gap:1px;max-width:44ch">
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid rgba(245,240,235,.24)"><span style="font-size:14.5px;color:#F5F0EB">Delicious but unmeasured</span><span style="font-family:'Caveat','Kalam',cursive;font-size:15px;color:#C8D9E6">no numbers</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid rgba(245,240,235,.24)"><span style="font-size:14.5px;color:#F5F0EB">Measured but foreign</span><span style="font-family:'Caveat','Kalam',cursive;font-size:15px;color:#C8D9E6">nobody sticks to it</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-top:1px solid rgba(245,240,235,.24);border-bottom:1px solid rgba(245,240,235,.24)"><span style="font-size:14.5px;color:#F5F0EB">Planned but unsupported</span><span style="font-family:'Caveat','Kalam',cursive;font-size:15px;color:#C8D9E6">week three, gone</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#F5F0EB;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px);overflow:hidden">
+    <div style="max-width:1300px;margin:0 auto">
+      <div style="text-align:center;max-width:56ch;margin:0 auto clamp(40px,6vh,70px)">
+        <span data-anim style="display:block;font-family:'Caveat','Kalam',cursive;font-size:clamp(18px,1.8vw,24px);color:#567C8D;margin-bottom:14px">chapter three</span>
+        <h2 data-anim data-delay="100" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.8vw,68px);line-height:1.02;letter-spacing:-.02em;color:#2F4156">What we believe</h2>
+      </div>
+      <div style="display:grid;gap:clamp(14px,2vw,26px);grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))">
+        <div data-anim="rise" style="background:#C8D9E6;border-radius:3px;padding:clamp(24px,3vw,40px);min-height:clamp(170px,20vh,230px);display:flex;flex-direction:column;justify-content:space-between;gap:20px">
+          <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(28px,3vw,42px);line-height:1;color:#567C8D">01</span>
+          <p style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(20px,2.1vw,28px);line-height:1.14;color:#2F4156">Nutrition should cost you attention once, not daily.</p>
+        </div>
+        <div data-anim="rise" data-delay="120" style="background:#C8D9E6;border-radius:3px;padding:clamp(24px,3vw,40px);min-height:clamp(170px,20vh,230px);display:flex;flex-direction:column;justify-content:space-between;gap:20px">
+          <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(28px,3vw,42px);line-height:1;color:#567C8D">02</span>
+          <p style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(20px,2.1vw,28px);line-height:1.14;color:#2F4156">A number you can't verify is decoration.</p>
+        </div>
+        <div data-anim="rise" data-delay="240" style="background:#2F4156;border-radius:3px;padding:clamp(24px,3vw,40px);min-height:clamp(170px,20vh,230px);display:flex;flex-direction:column;justify-content:space-between;gap:20px">
+          <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(28px,3vw,42px);line-height:1;color:#C8D9E6">03</span>
+          <p style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(20px,2.1vw,28px);line-height:1.14;color:#F5F0EB">Food you grew up with is the only food you'll keep eating.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#C8D9E6;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px);overflow:hidden">
+    <div style="max-width:1300px;margin:0 auto">
+      <div style="max-width:46ch;margin-bottom:clamp(40px,6vh,70px)">
+        <span data-anim style="display:block;font-family:'Caveat','Kalam',cursive;font-size:clamp(18px,1.8vw,24px);color:#567C8D;margin-bottom:14px">chapter four</span>
+        <h2 data-anim data-delay="100" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.8vw,68px);line-height:1.02;letter-spacing:-.02em;color:#2F4156">What we are building</h2>
+        <p data-anim data-delay="200" style="margin-top:20px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.7;color:#2F4156">Not a menu with a health claim attached. A system: a goal, a plan derived from it, fixed recipes cooked to that plan, stated nutrition, and a twelve-week arc that expects real life to interfere.</p>
+      </div>
+      <div style="display:grid;gap:clamp(14px,2vw,26px);grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))">
+        <div data-anim="rise" style="position:relative;aspect-ratio:3/4;border-radius:3px;overflow:hidden;background:#F5F0EB"><image-slot id="fl-story-3" shape="rect" fit="cover" placeholder="BUILD — kitchen prep, weighing components on a scale"></image-slot></div>
+        <div data-anim="rise" data-delay="110" style="position:relative;aspect-ratio:3/4;border-radius:3px;overflow:hidden;background:#F5F0EB"><image-slot id="fl-story-4" shape="rect" fit="cover" placeholder="BUILD — meals packed in ForkLore containers, labels visible"></image-slot></div>
+        <div data-anim="rise" data-delay="220" style="position:relative;aspect-ratio:3/4;border-radius:3px;overflow:hidden;background:#F5F0EB"><image-slot id="fl-story-5" shape="rect" fit="cover" placeholder="BUILD — someone eating a ForkLore lunch at a desk, unstaged"></image-slot></div>
+        <div data-anim="rise" data-delay="330" style="background:#2F4156;color:#F5F0EB;border-radius:3px;aspect-ratio:3/4;padding:clamp(20px,2.4vw,32px);display:flex;flex-direction:column;justify-content:space-between">
+          <span style="font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#C8D9E6">Where we are</span>
+          <p style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(19px,2vw,27px);line-height:1.14">Early. Building the kitchen system before the marketing.</p>
+          <a href="#/start" style="font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#C8D9E6;border-bottom:1px solid #567C8D;padding-bottom:5px;align-self:flex-start" style-hover="color:#F5F0EB">Join early &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+<sc-if value="{{ isFaq }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#F5F0EB;padding:clamp(56px,9vh,110px) clamp(18px,6vw,72px) clamp(30px,4vh,50px)">
+    <div style="max-width:1400px;margin:0 auto;display:grid;gap:clamp(24px,4vw,60px);align-items:end" data-split>
+      <div>
+        <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:20px">FAQ</span>
+        <h1 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(40px,7vw,96px);line-height:.96;letter-spacing:-.025em;color:#2F4156;max-width:14ch">Straight answers.</h1>
+        <svg data-draw data-speed="1200" viewBox="0 0 90 130" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#567C8D" stroke-width="2.6" style="margin-top:clamp(20px,3vh,32px);width:clamp(38px,4.5vw,60px);height:auto;display:block;overflow:visible">
+          <path d="M18 32C18 12 40 4 56 10C74 17 78 40 62 52C50 61 44 68 44 84"></path>
+          <path d="M44 106C44 103 46 101 49 101C52 101 54 103 54 106C54 109 52 111 49 111C46 111 44 109 44 106"></path>
+        </svg>
+      </div>
+      <p data-anim data-delay="180" style="font-size:clamp(15px,1.1vw,18px);line-height:1.64;color:#2F4156;max-width:42ch">Where a policy isn't finalised yet, it says so. We would rather leave a gap here than fill it with something we'd have to correct later.</p>
+    </div>
+  </section>
+
+  <section style="background:#F5F0EB;padding:clamp(30px,4vh,60px) clamp(18px,6vw,72px) clamp(70px,11vh,140px)">
+    <div style="max-width:1050px;margin:0 auto;border-top:1px solid rgba(47,65,86,.24)">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="10">
+        <div data-anim data-delay="{{ q.delay }}" style="border-bottom:1px solid rgba(47,65,86,.24)">
+          <button type="button" onClick="{{ q.toggle }}" aria-expanded="{{ q.open }}" style="width:100%;display:flex;align-items:baseline;justify-content:space-between;gap:24px;background:none;border:none;padding:clamp(20px,3vh,30px) 0;text-align:left;transition:padding-left .4s" style-hover="padding-left:8px">
+            <span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(20px,2.5vw,33px);line-height:1.12;color:#2F4156">{{ q.q }}</span>
+            <span style="font-size:24px;line-height:1;color:#567C8D;flex:0 0 auto;width:24px;text-align:right">{{ q.sign }}</span>
+          </button>
+          <sc-if value="{{ q.open }}" hint-placeholder-val="{{ false }}">
+            <p style="padding:0 0 clamp(24px,3.5vh,36px);max-width:62ch;font-size:clamp(14.5px,1.05vw,16.5px);line-height:1.72;color:#2F4156">{{ q.a }}</p>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <div data-anim style="max-width:1050px;margin:clamp(44px,6vh,76px) auto 0;background:#C8D9E6;border-radius:3px;padding:clamp(28px,4vw,52px);display:grid;gap:clamp(20px,3vw,40px);align-items:center" data-split>
+      <div>
+        <h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,3.2vw,42px);line-height:1.04;color:#2F4156;max-width:18ch">Still have a question?</h2>
+        <p style="margin-top:14px;font-size:15px;line-height:1.64;color:#2F4156;max-width:38ch">Ask it directly. We answer these ourselves while we're small enough to.</p>
+      </div>
+      <a href="#/start" style="justify-self:start;display:inline-flex;align-items:center;gap:12px;background:#2F4156;color:#F5F0EB;padding:18px 30px;border-radius:999px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s,transform .4s" style-hover="background:#2F4156;color:#F5F0EB;transform:translateY(-3px)">Get in touch &#8594;</a>
+    </div>
+  </section>
+</div>
+</sc-if>
+<sc-if value="{{ isStart }}" hint-placeholder-val="{{ false }}">
+<div>
+  <section style="background:#2F4156;color:#F5F0EB;padding:clamp(56px,9vh,110px) clamp(18px,6vw,72px) clamp(50px,8vh,100px);overflow:hidden">
+    <div style="max-width:1400px;margin:0 auto;display:grid;gap:clamp(30px,4vw,64px);align-items:end" data-split>
+      <div style="position:relative">
+        <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#C8D9E6;font-weight:600;margin-bottom:20px">Build my plan</span>
+        <svg data-draw data-speed="1300" viewBox="0 0 150 130" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#C8D9E6" stroke-width="2.6" style="position:absolute;right:0;top:clamp(-30px,-3vw,-10px);width:clamp(74px,8vw,130px);height:auto;overflow:visible;pointer-events:none">
+          <path d="M18 58C75 46 132 46 132 58"></path>
+          <path d="M24 60C75 122 126 122 126 60"></path>
+          <path d="M35 62C75 76 116 76 115 62"></path>
+          <path d="M58 40C66 30 50 24 60 12"></path>
+          <path d="M92 40C100 30 84 24 94 12"></path>
+        </svg>
+        <h1 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(38px,6.6vw,94px);line-height:.96;letter-spacing:-.025em;color:#F5F0EB;max-width:15ch">Five questions. Then we take it from here.</h1>
+      </div>
+      <p data-anim data-delay="180" style="font-size:clamp(15px,1.1vw,18px);line-height:1.66;color:#C8D9E6;max-width:42ch">This is the shape of the plan builder. Answer once, and every decision after it is derived rather than asked.</p>
+    </div>
+  </section>
+
+  <section style="background:#F5F0EB;padding:clamp(60px,9vh,120px) clamp(18px,6vw,72px)">
+    <div style="max-width:1150px;margin:0 auto;display:grid;gap:clamp(28px,4vh,56px)">
+
+      <div data-anim="rise" style="display:grid;gap:clamp(16px,3vw,44px)" data-split-wide>
+        <div><span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#567C8D;margin-bottom:12px">Step 01</span><h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.02;color:#2F4156">Your goal</h2><p style="margin-top:12px;font-size:14.5px;line-height:1.6;color:#2F4156;max-width:32ch">The single input everything else is derived from.</p></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
+          <span style="background:#2F4156;color:#F5F0EB;padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600">Fat loss</span>
+          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Muscle gain</span>
+          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Maintenance</span>
+        </div>
+      </div>
+
+      <div data-anim="rise" style="display:grid;gap:clamp(16px,3vw,44px);padding-top:clamp(28px,4vh,52px);border-top:1px solid rgba(47,65,86,.2)" data-split-wide>
+        <div><span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#567C8D;margin-bottom:12px">Step 02</span><h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.02;color:#2F4156">Food preference</h2><p style="margin-top:12px;font-size:14.5px;line-height:1.6;color:#2F4156;max-width:32ch">This decides which half of the menu you ever see.</p></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
+          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Vegetarian</span>
+          <span style="background:#567C8D;color:#2F4156;padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700">Non-vegetarian</span>
+          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Egg</span>
+        </div>
+      </div>
+
+      <div data-anim="rise" style="display:grid;gap:clamp(16px,3vw,44px);padding-top:clamp(28px,4vh,52px);border-top:1px solid rgba(47,65,86,.2)" data-split-wide>
+        <div><span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#567C8D;margin-bottom:12px">Step 03</span><h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.02;color:#2F4156">Meal frequency</h2><p style="margin-top:12px;font-size:14.5px;line-height:1.6;color:#2F4156;max-width:32ch">Which meals of the day you want handled.</p></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-content:start">
+          <span style="border:1px solid rgba(47,65,86,.35);padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#2F4156">Breakfast</span>
+          <span style="background:#2F4156;color:#F5F0EB;padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600">Lunch</span>
+          <span style="background:#2F4156;color:#F5F0EB;padding:15px 26px;border-radius:999px;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600">Dinner</span>
+        </div>
+      </div>
+
+      <div data-anim="rise" style="display:grid;gap:clamp(16px,3vw,44px);padding-top:clamp(28px,4vh,52px);border-top:1px solid rgba(47,65,86,.2)" data-split-wide>
+        <div><span style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#567C8D;margin-bottom:12px">Step 04</span><h2 style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(26px,3.4vw,46px);line-height:1.02;color:#2F4156">Preferences</h2><p style="margin-top:12px;font-size:14.5px;line-height:1.6;color:#2F4156;max-width:32ch">Spice, cuisine, allergies, and the things you simply won't eat.</p></div>
+        <div style="display:grid;gap:2px;align-content:start">
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Spice</span><span style="font-family:'Caveat','Kalam',cursive;font-size:16px;color:#2F4156">medium</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Cuisine lean</span><span style="font-family:'Caveat','Kalam',cursive;font-size:16px;color:#2F4156">north indian</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Allergies</span><span style="font-family:'Caveat','Kalam',cursive;font-size:16px;color:#2F4156">none declared</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid rgba(47,65,86,.18);border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Dislikes</span><span style="font-family:'Caveat','Kalam',cursive;font-size:16px;color:#2F4156">karela, bhindi</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="background:#C8D9E6;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px);overflow:hidden">
+    <div style="max-width:1150px;margin:0 auto">
+      <span data-anim="left" style="display:block;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#2F4156;margin-bottom:14px">Step 05 &#8212; Result</span>
+      <h2 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,5vw,72px);line-height:1;letter-spacing:-.02em;color:#2F4156;max-width:18ch">Your ForkLore plan is taking shape.</h2>
+      <div data-anim="rise" data-delay="180" style="margin-top:clamp(32px,5vh,56px);background:#F5F0EB;border:1px solid rgba(47,65,86,.22);border-radius:3px;padding:clamp(24px,3vw,44px)">
+        <div style="display:grid;gap:clamp(20px,3vw,44px)" data-split>
+          <div style="display:grid;gap:2px;align-content:start">
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Goal</span><span style="font-size:15px;color:#2F4156">Fat loss</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Plan</span><span style="font-size:15px;color:#2F4156">Lunch + dinner, 5 days</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Food</span><span style="font-size:15px;color:#2F4156">Non-vegetarian</span></div>
+            <div style="display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(47,65,86,.18)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#567C8D">Daily target</span><span style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(20px,2.2vw,30px);line-height:1;color:#2F4156">1,780 kcal</span></div>
+          </div>
+          <div style="position:relative;aspect-ratio:4/3;border-radius:2px;overflow:hidden;background:#C8D9E6">
+            <image-slot id="fl-start-plan" shape="rect" fit="cover" placeholder="RESULT — a week of ForkLore meals laid out in a row, overhead"></image-slot>
+          </div>
+        </div>
+        <p style="margin-top:clamp(22px,3vh,32px);font-size:13px;line-height:1.62;color:#2F4156;opacity:.85;max-width:64ch">Figures shown are illustrative of how a plan is structured. ForkLore provides planned nutrition, not medical advice — final nutrition suitability may require professional review where a medical condition, pregnancy or restriction applies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#2F4156;color:#F5F0EB;padding:clamp(70px,11vh,140px) clamp(18px,6vw,72px)">
+    <div style="max-width:1150px;margin:0 auto;display:grid;gap:clamp(30px,4vw,64px);align-items:start" data-split>
+      <div>
+        <h2 data-anim style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(30px,4.6vw,64px);line-height:1;letter-spacing:-.02em;color:#F5F0EB;max-width:16ch">Get in touch</h2>
+        <p data-anim data-delay="120" style="margin-top:18px;font-size:clamp(15px,1.1vw,17.5px);line-height:1.66;color:#C8D9E6;max-width:38ch">The builder goes live with launch. Until then, tell us your goal and we'll come back to you directly.</p>
+        <a data-anim data-delay="220" href="#/faq" style="display:inline-flex;align-items:center;gap:12px;margin-top:clamp(26px,3.5vh,40px);background:#F5F0EB;color:#2F4156;padding:18px 30px;border-radius:999px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s,transform .4s" style-hover="background:#C8D9E6;color:#2F4156;transform:translateY(-3px)">Read the FAQ first &#8594;</a>
+      </div>
+      <div data-anim data-delay="160" style="display:grid;gap:2px">
+        <div style="display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-top:1px solid rgba(245,240,235,.24)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#C8D9E6">Email</span><span style="font-size:15px;color:#F5F0EB">to be published</span></div>
+        <div style="display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-top:1px solid rgba(245,240,235,.24)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#C8D9E6">Instagram</span><span style="font-size:15px;color:#F5F0EB">to be published</span></div>
+        <div style="display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-top:1px solid rgba(245,240,235,.24)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#C8D9E6">Serving</span><span style="font-size:15px;color:#F5F0EB">cities to be announced</span></div>
+        <div style="display:flex;justify-content:space-between;gap:16px;padding:15px 0;border-top:1px solid rgba(245,240,235,.24);border-bottom:1px solid rgba(245,240,235,.24)"><span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#C8D9E6">Status</span><span style="font-size:15px;color:#F5F0EB">pre-launch</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+</main>
+
+<footer style="background:#2F4156;color:#F5F0EB;padding:clamp(56px,9vh,110px) clamp(18px,6vw,72px) clamp(28px,4vh,44px)">
+  <div style="max-width:1400px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:1fr;gap:clamp(34px,5vw,70px);padding-bottom:clamp(40px,6vh,70px);border-bottom:1px solid rgba(245,240,235,.2)" data-footer-grid>
+      <div>
+        <span style="display:block;font-family:'Fraunces','DM Serif Display',Georgia,serif;font-size:clamp(30px,3.4vw,46px);line-height:1;color:#F5F0EB">ForkLore</span>
+        <p style="margin-top:14px;font-family:'Caveat','Kalam',cursive;font-size:clamp(16px,1.4vw,20px);color:#C8D9E6">The story your body needs</p>
+        <svg data-draw data-speed="1200" viewBox="0 0 170 180" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#C8D9E6" stroke-width="2.6" style="margin-top:clamp(20px,3vh,30px);width:clamp(50px,5vw,72px);height:auto;display:block;overflow:visible">
+          <g transform="rotate(-15 60 90)">
+            <path d="M12 8L12 48C12 66 22 78 32 80C42 78 52 66 52 48L52 8"></path>
+            <path d="M22 8L22 46"></path><path d="M42 8L42 46"></path>
+            <path d="M32 80C31 116 32 146 32 170"></path>
+          </g>
+          <g transform="rotate(15 112 90)">
+            <path d="M112 10C128 10 136 28 134 46C132 64 124 76 112 76C100 76 92 64 90 46C88 28 96 10 112 10"></path>
+            <path d="M112 76C111 112 112 144 112 170"></path>
+          </g>
+        </svg>
+        <a href="#/start" style="display:inline-flex;align-items:center;gap:12px;margin-top:clamp(24px,3.5vh,38px);background:#F5F0EB;color:#2F4156;padding:16px 28px;border-radius:999px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;transition:background .4s" style-hover="background:#C8D9E6;color:#2F4156">Start my plan &#8594;</a>
+      </div>
+      <nav aria-label="Footer" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:clamp(20px,3vw,40px)">
+        <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="3">
+          <div>
+            <h4 style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#C8D9E6;font-weight:700;margin-bottom:16px">{{ col.title }}</h4>
+            <div style="display:flex;flex-direction:column;gap:11px">
+              <sc-for list="{{ col.links }}" as="l" hint-placeholder-count="4">
+                <a href="{{ l.href }}" style="font-size:14px;color:#C8D9E6" style-hover="color:#F5F0EB">{{ l.label }}</a>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </nav>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;padding-top:clamp(20px,3vh,30px)">
+      <span style="font-size:12px;color:#C8D9E6">&#169; ForkLore.in &#183; Meals are planned nutrition, not medical treatment. Where a condition or restriction applies, review your plan with a qualified professional.</span>
+      <span style="font-size:12px;color:#C8D9E6">Made in India</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#567C8D&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#567C8D&quot;,&quot;#C8D9E6&quot;,&quot;#2F4156&quot;],&quot;section&quot;:&quot;Brand&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;cinematic&quot;,&quot;options&quot;:[&quot;cinematic&quot;,&quot;restrained&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;showSlots&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Imagery&quot;}}">
+class Component extends DCLogic {
+  state = {
+    page: 'home', drawer: false, faq: null, plan: null, ing: null,
+    step: 0, build: { goal: '', diet: '', meals: ['Lunch'], spice: 'Medium' }
+  };
+
+  componentDidMount() {
+    this._sync = () => {
+      const h = (location.hash || '').replace(/^#\/?/, '').split('?')[0] || 'home';
+      if (h === 'main') return;
+      const known = ['home', 'how-it-works', 'meal-plans', 'nutrition', 'our-story', 'faq', 'start', 'contact'];
+      this.setState({ page: known.indexOf(h) > -1 ? h : 'home', drawer: false });
+    };
+    window.addEventListener('hashchange', this._sync);
+    this._sync();
+    this._lastPage = this.state.page;
+    this.wire();
+    this._n = 0;
+    this._tick = () => {
+      this._raf = requestAnimationFrame(this._tick);
+      this._n++;
+      this.frame();
+      if (this._n % 15 === 0) this.wire();
+    };
+    this._tick();
+  }
+
+  resetScroll() {
+    try { window.scrollTo(0, 0); } catch (e) {}
+    if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+    if (document.documentElement) document.documentElement.scrollTop = 0;
+    if (document.body) document.body.scrollTop = 0;
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('hashchange', this._sync);
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._io) this._io.disconnect();
+    if (this._dio) this._dio.disconnect();
+  }
+
+  componentDidUpdate() {
+    if (this._lastPage !== this.state.page) {
+      this._lastPage = this.state.page;
+      this.resetScroll();
+    }
+    this.wire();
+  }
+
+  reduced() {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  wire() {
+    if (this.reduced()) return;
+    document.querySelectorAll('[data-anim]:not([data-reveal])').forEach(function (el) {
+      el.setAttribute('data-reveal', 'out');
+      const d = el.getAttribute('data-delay');
+      if (d) el.style.transitionDelay = d + 'ms';
+    });
+    document.querySelectorAll('svg[data-draw]:not([data-drawn])').forEach(function (svg) {
+      svg.setAttribute('data-drawn', '0');
+      svg.querySelectorAll('path,line,polyline,circle,ellipse').forEach(function (p) {
+        let L = 0;
+        try { L = p.getTotalLength ? p.getTotalLength() : 0; } catch (e) { L = 0; }
+        if (!L) return;
+        p.style.strokeDasharray = L;
+        p.style.strokeDashoffset = L;
+      });
+    });
+    this.frame();
+  }
+
+  draw(svg) {
+    const sp = Number(svg.getAttribute('data-speed') || 750);
+    svg.querySelectorAll('path,line,polyline,circle,ellipse').forEach(function (p, i) {
+      if (!p.style.strokeDasharray) return;
+      p.style.transition = 'stroke-dashoffset ' + sp + 'ms cubic-bezier(.36,.1,.28,1) ' + (i * 170) + 'ms';
+      p.style.strokeDashoffset = '0';
+    });
+  }
+
+  undraw(svg) {
+    svg.querySelectorAll('path,line,polyline,circle,ellipse').forEach(function (p) {
+      if (!p.style.strokeDasharray) return;
+      p.style.transition = 'none';
+      p.style.strokeDashoffset = p.style.strokeDasharray;
+    });
+  }
+
+  frame() {
+    if (this.reduced()) return;
+    const vh = window.innerHeight;
+    const narrow = window.innerWidth < 760;
+    document.querySelectorAll('[data-parallax]').forEach(function (el) {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) return;
+      const c = (r.top + r.height / 2 - vh / 2) / vh;
+      const amt = Number(el.getAttribute('data-parallax')) * (narrow ? 0.45 : 1);
+      el.style.transform = 'translate3d(0,' + (c * amt).toFixed(2) + 'px,0)';
+    });
+    document.querySelectorAll('[data-scene]').forEach(function (el) {
+      const r = el.getBoundingClientRect();
+      const span = Math.max(1, r.height - vh);
+      const p = Math.min(1, Math.max(0, -r.top / span));
+      el.style.setProperty('--p', p.toFixed(4));
+    });
+    const self = this;
+    document.querySelectorAll('[data-anim][data-reveal]').forEach(function (el) {
+      const r = el.getBoundingClientRect();
+      const inView = r.top < vh * 0.9 && r.bottom > vh * 0.08;
+      const want = inView ? 'in' : 'out';
+      if (el.getAttribute('data-reveal') !== want) el.setAttribute('data-reveal', want);
+    });
+    document.querySelectorAll('svg[data-draw][data-drawn]').forEach(function (svg) {
+      const r = svg.getBoundingClientRect();
+      if (r.width === 0 && r.height === 0) return;
+      const inView = r.top < vh * 0.86 && r.bottom > vh * 0.1;
+      const shown = svg.getAttribute('data-drawn') === '1';
+      if (inView && !shown) { svg.setAttribute('data-drawn', '1'); self.draw(svg); }
+      else if (!inView && shown) { svg.setAttribute('data-drawn', '0'); self.undraw(svg); }
+    });
+  }
+
+  renderVals() {
+    const page = this.state.page;
+    const self = this;
+    const items = [
+      ['Home', 'home'], ['How it works', 'how-it-works'], ['Meal Plans', 'meal-plans'],
+      ['Nutrition', 'nutrition'], ['Our Story', 'our-story']
+    ];
+    const nav = items.map(function (it) {
+      return { label: it[0], href: '#/' + it[1], current: page === it[1] ? 'page' : null };
+    });
+
+    return {
+      nav: nav,
+      drawerOpen: this.state.drawer,
+      toggleDrawer: function () { self.setState(function (s) { return { drawer: !s.drawer }; }); },
+      closeDrawer: function () { self.setState({ drawer: false }); },
+      isHome: page === 'home',
+      isHow: page === 'how-it-works',
+      isPlans: page === 'meal-plans',
+      isNutrition: page === 'nutrition',
+      isStory: page === 'our-story',
+      isFaq: page === 'faq',
+      isStart: page === 'start' || page === 'contact',
+
+      plans: PLANS.map(function (p, i) {
+        const open = self.state.plan === p.id;
+        return {
+          id: p.id, kicker: p.kicker, name: p.name, line: p.line, slot: 'fl-pl-' + p.id, ph: p.ph,
+          freq: p.freq, style: p.style, approach: p.approach, meals: p.meals, open: open,
+          delay: i * 110,
+          label: open ? 'Close details' : 'See full plan',
+          toggle: function () { self.setState({ plan: open ? null : p.id }); }
+        };
+      }),
+
+      ingredients: INGREDIENTS.map(function (g, i) {
+        const open = self.state.ing === g.id;
+        return {
+          id: g.id, name: g.name, open: open, delay: i * 100, note: g.note,
+          rows: g.rows.map(function (r) { return { k: r[0], v: r[1] }; }),
+          sign: open ? '\u2212' : '+',
+          toggle: function () { self.setState({ ing: open ? null : g.id }); }
+        };
+      }),
+
+      faqs: FAQS.map(function (q, i) {
+        const open = self.state.faq === i;
+        return {
+          q: q.q, a: q.a, open: open, sign: open ? '\u2212' : '+', delay: (i % 5) * 70,
+          toggle: function () { self.setState({ faq: open ? null : i }); }
+        };
+      }),
+
+      problems: [
+        { tag: 'every morning', text: 'What should I eat?', delay: 0 },
+        { tag: 'every plate', text: 'How much should I eat?', delay: 120 },
+        { tag: 'every time', text: 'Does this fit my goal?', delay: 240 }
+      ],
+      system: [
+        { num: '01', title: 'Goal', body: 'Fat loss, muscle gain or maintenance. One choice, made once.', delay: 0 },
+        { num: '02', title: 'Plan', body: 'The goal becomes a daily structure — meals, timing, targets.', delay: 90 },
+        { num: '03', title: 'Meals', body: 'Fixed Indian recipes cooked to that structure. No improvisation.', delay: 180 },
+        { num: '04', title: 'Nutrition', body: 'Weighed components, stated macros. The same plate, every time.', delay: 270 },
+        { num: '05', title: 'Consistency', body: 'A repeating routine you follow without rebuilding it daily.', delay: 360 },
+        { num: '06', title: 'Progress', body: 'Twelve weeks, with check-ins that adjust the plan as you change.', delay: 450 }
+      ],
+      transparency: [
+        { name: 'Fixed recipes', note: 'no drifting portions' },
+        { name: 'Weighed components', note: 'grams, not handfuls' },
+        { name: 'Stated macros', note: 'protein / carbs / fat' },
+        { name: 'Same plate, every time', note: 'that is the point' }
+      ],
+      ticker: [
+        'Fixed recipes', 'Controlled portions', 'Clear nutrition', 'Goal-based meals', 'Consistency',
+        'Fixed recipes', 'Controlled portions', 'Clear nutrition', 'Goal-based meals', 'Consistency'
+      ],
+      planPreview: [
+        { kicker: 'Goal 01', name: 'Fat Loss', line: 'A calorie deficit that still looks like dinner. High volume, high protein, Indian.', slot: 'fl-plan-fatloss', ph: 'PLAN — grilled chicken tikka, salad, small portion brown rice', delay: 0 },
+        { kicker: 'Goal 02', name: 'Muscle Gain', line: 'Protein-led plates with the carbohydrate to actually train on.', slot: 'fl-plan-muscle', ph: 'PLAN — paneer tikka bowl with rajma and jeera brown rice', delay: 120 },
+        { kicker: 'Goal 03', name: 'Maintenance', line: 'Hold your composition without counting anything again.', slot: 'fl-plan-maintain', ph: 'PLAN — dal, roti, sabzi, cucumber salad on a bone plate', delay: 240 }
+      ],
+      journey: [
+        { weeks: '01\u201302', label: 'Foundation', body: 'The routine gets built. Meals arrive, timings settle, nothing is optimised yet.', delay: 0 },
+        { weeks: '03\u201304', label: 'Confirmation', body: 'First check-in. The plan is confirmed or corrected against what actually happened.', delay: 110 },
+        { weeks: '05\u201308', label: 'Momentum', body: 'The decisions have stopped. Eating on plan is no longer a daily act of will.', delay: 220 },
+        { weeks: '09\u201312', label: 'Breakthrough', body: 'The system is yours. Adjustments are small, and you can see the arc behind you.', delay: 330 }
+      ],
+      footerCols: [
+        { title: 'Explore', links: [
+          { label: 'How it works', href: '#/how-it-works' },
+          { label: 'Meal Plans', href: '#/meal-plans' },
+          { label: 'Nutrition System', href: '#/nutrition' }
+        ] },
+        { title: 'Brand', links: [
+          { label: 'Our Story', href: '#/our-story' },
+          { label: 'FAQ', href: '#/faq' },
+          { label: 'Contact', href: '#/start' },
+          { label: 'Start my plan', href: '#/start' }
+        ] },
+        { title: 'Policies', links: [
+          { label: 'Terms of service', href: '#/faq' },
+          { label: 'Privacy policy', href: '#/faq' },
+          { label: 'Refunds & cancellation', href: '#/faq' },
+          { label: 'Instagram', href: '#/faq' }
+        ] }
+      ]
+    };
+  }
+}
+
+
+const PLANS = [
+  { id: 'fatloss', kicker: 'Goal 01', name: 'Fat Loss', line: 'A calorie deficit that still looks like dinner. High volume, high protein, unmistakably Indian.', freq: 'Lunch + dinner, 5 or 6 days', style: 'Grilled proteins, big salads, controlled rice', approach: 'Moderate deficit with protein held high so you keep muscle while the weight moves', meals: ['Tandoori chicken + roasted veg', 'Chana salad', 'Millet khichdi'], ph: 'PLAN — grilled chicken tikka with a large salad and small rice portion' },
+  { id: 'muscle', kicker: 'Goal 02', name: 'Muscle Gain', line: 'Protein-led plates with the carbohydrate to actually train on.', freq: 'Lunch + dinner, 6 days', style: 'Paneer, chicken, dal, brown rice, millet', approach: 'A small surplus, protein spread across the day rather than stacked into one meal', meals: ['High protein paneer bowl', 'Chicken tikka + brown rice', 'Rajma + rice'], ph: 'PLAN — paneer tikka bowl with rajma and jeera brown rice' },
+  { id: 'maintain', kicker: 'Goal 03', name: 'Maintenance', line: 'Hold your composition without counting anything again.', freq: 'Lunch or dinner, flexible', style: 'Everyday home-style Indian, portioned', approach: 'Calories matched to your routine so nothing drifts in either direction', meals: ['Dal + brown rice', 'Vegetable pulao', 'Paneer tikka bowl'], ph: 'PLAN — dal, sabzi and cucumber salad on a bone plate' },
+  { id: 'protein', kicker: 'Goal 04', name: 'High Protein', line: 'For anyone who keeps missing protein rather than calories.', freq: 'Lunch + dinner, 6 days', style: 'Chicken, paneer, sprouts, curd, chana', approach: 'Every plate built to a protein floor first, then filled out to your calories', meals: ['Grilled chicken tikka', 'High protein paneer bowl', 'Chana salad'], ph: 'PLAN — chicken tikka and paneer with sprouts and curd' },
+  { id: 'balanced', kicker: 'Goal 05', name: 'Balanced', line: 'No goal in particular. Just eat properly, every day, without thinking.', freq: 'One meal a day, any days', style: 'Regional Indian preparations, rotated weekly', approach: 'Even macro split across a rotating menu, portioned to your body', meals: ['Millet khichdi', 'Rajma + rice', 'Vegetable pulao'], ph: 'PLAN — a rotating spread of regional Indian preparations' }
+];
+
+const INGREDIENTS = [
+  { id: 'chicken', name: 'Chicken', note: 'grilled, never fried', rows: [['Cut', 'Boneless thigh and breast'], ['Portion', '150\u2013200 g cooked'], ['Protein', '32\u201342 g per portion'], ['Method', 'Yoghurt marinade, grilled']] },
+  { id: 'paneer', name: 'Paneer', note: 'the vegetarian anchor', rows: [['Type', 'Full-fat, set fresh'], ['Portion', '100\u2013180 g'], ['Protein', '18\u201332 g per portion'], ['Method', 'Grilled or lightly pan-seared']] },
+  { id: 'rice', name: 'Rice & millet', note: 'weighed cooked, not raw', rows: [['Type', 'Brown rice, little millet'], ['Portion', '120\u2013180 g cooked'], ['Carbohydrate', '38\u201358 g per portion'], ['Note', 'Portion moves with your goal, recipe does not']] },
+  { id: 'dal', name: 'Dal & legumes', note: 'protein you forget to count', rows: [['Type', 'Moong, toor, rajma, kala chana'], ['Portion', '150\u2013200 g cooked'], ['Protein', '9\u201316 g per portion'], ['Note', 'Tadka measured, not poured by eye']] },
+  { id: 'veg', name: 'Vegetables', note: 'volume does the work', rows: [['Variety', 'Seasonal, rotated weekly'], ['Portion', '100\u2013150 g'], ['Contributes', 'Fibre, micronutrients, satiety'], ['Method', 'Roasted, sauteed or raw']] },
+  { id: 'fat', name: 'Fats', note: 'present, and counted', rows: [['Type', 'Ghee, mustard and groundnut oil'], ['Portion', 'Measured per recipe'], ['Note', 'Enough for flavour, inside your target'], ['Not used', 'Cream-heavy gravies, deep frying']] }
+];
+
+const FAQS = [
+  { q: 'How does ForkLore work?', a: 'You pick a goal and answer a short set of questions. That becomes a nutrition profile, the profile becomes a meal plan, and the plan arrives as cooked meals on a schedule. You are not asked to decide anything again day to day.' },
+  { q: 'How are meals planned?', a: 'Every meal is a fixed recipe with fixed component weights. Your plan selects from that menu and sets the portion sizes, so the same dish gives the same numbers every time you receive it.' },
+  { q: 'How are nutrition values calculated?', a: 'From the recipe: each component is weighed and its macros are computed from standard composition data for that ingredient, then totalled for the plate. Because recipes and portions are fixed rather than estimated after cooking, the numbers stay stable.' },
+  { q: 'Can I pause my plan?', a: 'Pausing is part of the model \u2014 travel and work weeks happen. Exact notice periods and pause limits are being finalised and will be published here before launch.' },
+  { q: 'Can I change meals?', a: 'Yes, within your plan\u2019s menu. Swaps are matched to keep your plan on target rather than left open, so a swap does not quietly change your numbers. Swap windows and cut-off times are to be confirmed.' },
+  { q: 'What food preferences can I choose?', a: 'Vegetarian, non-vegetarian and egg, along with spice level and a dislikes list. Regional preferences are part of the menu rotation rather than a separate plan.' },
+  { q: 'How are meals delivered?', a: 'Delivery cities, slots and packaging details are being finalised. This answer will be replaced with the real operating detail before launch rather than an estimate.' },
+  { q: 'What happens if I miss a meal?', a: 'Missing one meal does not break a plan \u2014 the twelve-week arc is built to absorb it. How missed meals are handled commercially is still being decided and will be stated plainly here.' },
+  { q: 'How does cancellation work?', a: 'Cancellation and refund terms are not finalised. They will be published in full, in plain language, rather than buried in terms.' },
+  { q: 'How do you handle allergies?', a: 'You declare allergies and dislikes when you build your plan, and affected recipes are removed from your menu. ForkLore is planned nutrition, not medical care \u2014 for a diagnosed condition or a serious allergy, review your plan with a qualified professional before starting.' }
+];
+</script>
+</body>
+</html>
