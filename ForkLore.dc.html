@@ -366,19 +366,42 @@ button{font-family:inherit;cursor:pointer}
 <sc-if value="{{ isHow }}" hint-placeholder-val="{{ false }}">
 <div>
   <section style="background:#F5F0EB;padding:clamp(56px,9vh,110px) clamp(18px,6vw,72px) clamp(40px,6vh,80px);border-bottom:1px solid rgba(47,65,86,.18);overflow:hidden">
-    <div style="position:relative;max-width:1400px;margin:0 auto">
-      <svg data-draw data-speed="1300" viewBox="0 0 130 180" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2F4156" stroke-width="2.6" data-parallax="16" style="position:absolute;right:clamp(0px,3vw,50px);top:clamp(-6px,0vw,10px);width:clamp(66px,8.5vw,132px);height:auto;overflow:visible;pointer-events:none">
-        <circle cx="65" cy="20" r="7"></circle>
-        <path d="M65 27C50 42 78 58 60 74"></path>
-        <circle cx="60" cy="74" r="5"></circle>
-        <path d="M60 74C46 92 84 104 70 122"></path>
-        <circle cx="70" cy="122" r="5"></circle>
-        <path d="M70 122C62 138 68 152 65 160"></path>
-        <path d="M55 150L65 163L75 148"></path>
-      </svg>
-      <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:20px">How it works</span>
-      <h1 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(40px,7vw,100px);line-height:.96;letter-spacing:-.025em;color:#2F4156;max-width:17ch">Six steps. Then it runs itself.</h1>
-      <p data-anim data-delay="200" style="margin-top:clamp(22px,3vh,34px);font-size:clamp(15px,1.15vw,18.5px);line-height:1.64;color:#2F4156;max-width:48ch">Scroll once, all the way down. The same plate carries through every step — from a goal you pick to a number you can trust.</p>
+    <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:clamp(32px,5vw,72px);align-items:center" data-split-wide>
+      <div>
+        <span data-anim="left" style="display:block;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:#567C8D;font-weight:600;margin-bottom:20px">How it works</span>
+        <h1 data-anim="clip" style="font-family:'Fraunces','DM Serif Display',Georgia,serif;font-weight:400;font-size:clamp(40px,7vw,100px);line-height:.96;letter-spacing:-.025em;color:#2F4156;max-width:17ch">Six steps. Then it runs itself.</h1>
+        <p data-anim data-delay="200" style="margin-top:clamp(22px,3vh,34px);font-size:clamp(15px,1.15vw,18.5px);line-height:1.64;color:#2F4156;max-width:48ch">Scroll once, all the way down. The same plate carries through every step — from a goal you pick to a number you can trust.</p>
+      </div>
+      <div data-anim="scale" style="position:relative;display:flex;justify-content:center;align-items:center;padding:clamp(10px,2vh,30px) 0">
+        <svg data-draw data-speed="1100" viewBox="0 0 300 588" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke="#2F4156" style="width:clamp(210px,32vw,360px);height:auto;overflow:visible">
+          <path stroke-width="2.6" d="M150 44C150 78 112 88 118 120"></path>
+          <path stroke-width="2.6" d="M118 120C124 152 190 164 182 196"></path>
+          <path stroke-width="2.6" d="M182 196C174 228 108 240 116 272"></path>
+          <path stroke-width="2.6" d="M116 272C124 304 192 316 184 348"></path>
+          <path stroke-width="2.6" d="M184 348C176 380 132 396 140 424"></path>
+          <path stroke-width="2.6" d="M140 424C146 452 150 466 150 480"></path>
+          <path stroke-width="2.6" d="M140 472L150 486L160 472"></path>
+          <circle cx="150" cy="516" r="30" fill="#F5F0EB" stroke-width="2.6"></circle>
+          <circle cx="150" cy="516" r="21" stroke-width="1.5" stroke="#567C8D"></circle>
+          <path d="M138 508C144 504 156 504 162 508" stroke="#567C8D" stroke-width="1.5"></path>
+          <circle cx="150" cy="44" r="11.5" fill="#F5F0EB" stroke-width="2.4"></circle>
+          <circle cx="118" cy="120" r="10.5" fill="#F5F0EB" stroke-width="2.2"></circle>
+          <circle cx="182" cy="196" r="10.5" fill="#F5F0EB" stroke-width="2.2"></circle>
+          <circle cx="116" cy="272" r="10.5" fill="#F5F0EB" stroke-width="2.2"></circle>
+          <circle cx="184" cy="348" r="10.5" fill="#F5F0EB" stroke-width="2.2"></circle>
+          <circle cx="140" cy="424" r="10.5" fill="#F5F0EB" stroke-width="2.2"></circle>
+          <text x="150" y="49" text-anchor="middle" font-family="'Fraunces','DM Serif Display',Georgia,serif" font-size="13" fill="#2F4156" stroke="none">1</text>
+          <text x="118" y="125" text-anchor="middle" font-family="'Fraunces','DM Serif Display',Georgia,serif" font-size="12" fill="#2F4156" stroke="none">2</text>
+          <text x="182" y="201" text-anchor="middle" font-family="'Fraunces','DM Serif Display',Georgia,serif" font-size="12" fill="#2F4156" stroke="none">3</text>
+          <text x="116" y="277" text-anchor="middle" font-family="'Fraunces','DM Serif Display',Georgia,serif" font-size="12" fill="#2F4156" stroke="none">4</text>
+          <text x="184" y="353" text-anchor="middle" font-family="'Fraunces','DM Serif Display',Georgia,serif" font-size="12" fill="#2F4156" stroke="none">5</text>
+          <text x="140" y="429" text-anchor="middle" font-family="'Fraunces','DM Serif Display',Georgia,serif" font-size="12" fill="#2F4156" stroke="none">6</text>
+          <text x="150" y="519" text-anchor="middle" font-family="'Fraunces','DM Serif Display',Georgia,serif" font-size="17" fill="#2F4156" stroke="none">520</text>
+          <text x="150" y="533" text-anchor="middle" font-size="7.5" letter-spacing="1.5" font-weight="700" fill="#567C8D" stroke="none">KCAL</text>
+          <text x="176" y="38" font-family="'Caveat','Kalam',cursive" font-size="18" fill="#567C8D" stroke="none">pick a goal</text>
+          <text x="150" y="576" text-anchor="middle" font-family="'Caveat','Kalam',cursive" font-size="17" fill="#567C8D" stroke="none">a number you can trust</text>
+        </svg>
+      </div>
     </div>
   </section>
 
