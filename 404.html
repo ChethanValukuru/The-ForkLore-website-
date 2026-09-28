@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ForkLore</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="/The-ForkLore-website-/favicon.svg">
+<style>
+  html,body{margin:0;height:100%;background:#F5F0EB;color:#2F4156;
+    font-family:'Fraunces',Georgia,serif;display:flex;align-items:center;justify-content:center;text-align:center}
+  a{color:#2F4156;font-size:20px;letter-spacing:.02em;text-decoration:none;border-bottom:1px solid #567C8D;padding-bottom:4px}
+</style>
+</head>
+<body>
+  <a href="./ForkLore-offline.html">Take me to ForkLore &rarr;</a>
+  <script>
+    // Single-page site: send any unknown path back to the app,
+    // preserving the requested route as a hash.
+    (function () {
+      var path = location.pathname.replace(/^\/[^/]*\//, '');
+      var hash = location.hash || (path && path !== 'index.html' ? '#/' + path.replace(/\.html$/, '') : '');
+      location.replace('./ForkLore-offline.html' + hash);
+    })();
+  </script>
+</body>
+</html>
