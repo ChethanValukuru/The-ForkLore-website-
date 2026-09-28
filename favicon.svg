@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ForkLore">
+  <rect width="64" height="64" rx="14" fill="#2F4156"/>
+  <text x="30" y="46" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#F5F0EB" text-anchor="middle">F</text>
+  <circle cx="49" cy="43" r="3.4" fill="#567C8D"/>
+</svg>
