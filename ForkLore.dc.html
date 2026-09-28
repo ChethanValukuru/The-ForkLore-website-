@@ -67,6 +67,7 @@ button{font-family:inherit;cursor:pointer}
 [data-flat] [data-stick]{position:static !important;height:auto !important;overflow:visible !important;opacity:1 !important}
 [data-flat] [data-anim]{--p:0;opacity:1 !important;transform:none !important}
 [data-flat] [data-anim][data-reveal="in"]{--p:1;transition:--p 1.35s cubic-bezier(.2,.7,.2,1)}
+[data-flat][aria-label^="Step two"] [data-anim][data-reveal="in"],[data-flat][aria-label^="Step three"] [data-anim][data-reveal="in"]{transition-duration:.95s}
 @media (prefers-reduced-motion: reduce){
 [data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
 [data-scene]{--p:1 !important;height:auto !important}
