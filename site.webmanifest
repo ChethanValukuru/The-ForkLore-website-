@@ -1,0 +1,17 @@
+{
+  "name": "ForkLore",
+  "short_name": "ForkLore",
+  "description": "A structured Indian meal-plan and nutrition system — planned meals, controlled portions, clear numbers.",
+  "start_url": "./ForkLore-offline.html",
+  "display": "standalone",
+  "background_color": "#F5F0EB",
+  "theme_color": "#2F4156",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ]
+}
