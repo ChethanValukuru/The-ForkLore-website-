@@ -62,11 +62,15 @@ button{font-family:inherit;cursor:pointer}
 [data-pill][data-sel="on"]{background:#2F4156;border-color:#2F4156;color:#F5F0EB}
 @keyframes fl-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes fl-bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-9px) rotate(1.5deg)}}
-[data-flat]{--p:1 !important;height:auto !important}
+@property --p{syntax:'<number>';inherits:true;initial-value:0}
+[data-flat]{height:auto !important}
 [data-flat] [data-stick]{position:static !important;height:auto !important;overflow:visible !important;opacity:1 !important}
+[data-flat] [data-anim]{--p:0}
+[data-flat] [data-anim][data-reveal="in"]{--p:1;transition:--p 1.35s cubic-bezier(.2,.7,.2,1),opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
 @media (prefers-reduced-motion: reduce){
 [data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
 [data-scene]{--p:1 !important;height:auto !important}
+[data-flat] [data-anim]{--p:1 !important}
 [data-stick]{position:static !important;height:auto !important;opacity:1 !important}
 [data-plate-grid]{--stag:0 !important}
 [data-marquee]{animation:none !important}
@@ -378,7 +382,7 @@ button{font-family:inherit;cursor:pointer}
     </div>
   </section>
 
-  <section data-scene data-flat aria-label="Step one: your goal" style="--p:.82;position:relative;height:190vh;background:#F5F0EB">
+  <section data-flat aria-label="Step one: your goal" style="--p:.82;position:relative;height:190vh;background:#F5F0EB">
     <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div data-anim style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
         <div>
@@ -425,7 +429,7 @@ button{font-family:inherit;cursor:pointer}
     </div>
   </section>
 
-  <section data-scene data-flat aria-label="Step two: your plan" style="--p:.82;position:relative;height:190vh;background:#C8D9E6">
+  <section data-flat aria-label="Step two: your plan" style="--p:.82;position:relative;height:190vh;background:#C8D9E6">
     <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div data-anim style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
         <div>
@@ -458,7 +462,7 @@ button{font-family:inherit;cursor:pointer}
     </div>
   </section>
 
-  <section data-scene data-flat aria-label="Step three: your meals" style="--p:.82;position:relative;height:195vh;background:#2F4156;color:#F5F0EB">
+  <section data-flat aria-label="Step three: your meals" style="--p:.82;position:relative;height:195vh;background:#2F4156;color:#F5F0EB">
     <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div data-anim style="max-width:1400px;margin:0 auto;width:100%;display:grid;gap:clamp(30px,4vw,64px);align-items:center" data-split>
         <div>
@@ -479,7 +483,7 @@ button{font-family:inherit;cursor:pointer}
     </div>
   </section>
 
-  <section data-scene data-flat aria-label="Step four: your nutrition" style="--p:.82;position:relative;height:205vh;background:#F5F0EB">
+  <section data-flat aria-label="Step four: your nutrition" style="--p:.82;position:relative;height:205vh;background:#F5F0EB">
     <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div data-anim style="max-width:1400px;margin:0 auto;width:100%">
         <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:clamp(24px,4vh,48px)">
@@ -531,7 +535,7 @@ button{font-family:inherit;cursor:pointer}
     </div>
   </section>
 
-  <section data-scene data-flat aria-label="Step five: your routine" style="--p:.82;position:relative;height:185vh;background:#C8D9E6">
+  <section data-flat aria-label="Step five: your routine" style="--p:.82;position:relative;height:185vh;background:#C8D9E6">
     <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div data-anim style="max-width:1400px;margin:0 auto;width:100%">
         <div style="max-width:44ch;margin-bottom:clamp(26px,4vh,50px)">
@@ -553,7 +557,7 @@ button{font-family:inherit;cursor:pointer}
     </div>
   </section>
 
-  <section data-scene data-flat aria-label="Step six: your progress" style="--p:.82;position:relative;height:195vh;background:#2F4156;color:#F5F0EB">
+  <section data-flat aria-label="Step six: your progress" style="--p:.82;position:relative;height:195vh;background:#2F4156;color:#F5F0EB">
     <div data-stick style="position:sticky;top:0;height:100vh;display:flex;align-items:center;padding:clamp(70px,10vh,110px) clamp(18px,6vw,72px);overflow:hidden;opacity:calc(1 - min(1, max(0, (var(--p) - 0.86) * 8)))">
       <div data-anim style="max-width:1400px;margin:0 auto;width:100%">
         <div style="max-width:46ch;margin-bottom:clamp(30px,4.5vh,56px)">
