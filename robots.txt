@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chethanvalukuru.github.io/The-ForkLore-website-/sitemap.xml
