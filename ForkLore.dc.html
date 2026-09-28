@@ -65,8 +65,8 @@ button{font-family:inherit;cursor:pointer}
 @property --p{syntax:'<number>';inherits:true;initial-value:0}
 [data-flat]{height:auto !important}
 [data-flat] [data-stick]{position:static !important;height:auto !important;overflow:visible !important;opacity:1 !important}
-[data-flat] [data-anim]{--p:0}
-[data-flat] [data-anim][data-reveal="in"]{--p:1;transition:--p 1.35s cubic-bezier(.2,.7,.2,1),opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+[data-flat] [data-anim]{--p:0;opacity:1 !important;transform:none !important}
+[data-flat] [data-anim][data-reveal="in"]{--p:1;transition:--p 1.35s cubic-bezier(.2,.7,.2,1)}
 @media (prefers-reduced-motion: reduce){
 [data-reveal]{opacity:1 !important;transform:none !important;clip-path:none !important}
 [data-scene]{--p:1 !important;height:auto !important}
